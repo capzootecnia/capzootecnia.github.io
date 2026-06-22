@@ -1,0 +1,1 @@
+const e={whatsapp:{url:"https://wa.me/51949311461",phoneHref:"tel:+51949311461"},socials:{facebook:"https://www.facebook.com/people/Congreso-Macro-Regional-de-Ingenier%C3%ADa-Zootecnia-2026/61590411372914/"}};export{e};

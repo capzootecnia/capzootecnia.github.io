@@ -1,0 +1,31 @@
+---
+import { event } from "../data/event";
+---
+
+<section class="section-divider bg-cip-warm py-24">
+  <div class="section-shell">
+    <div class="grid gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
+      <div>
+        <p class="luxury-kicker">Inscripcion</p>
+        <h2 class="mt-4 text-3xl font-black leading-tight text-cip-navy sm:text-4xl">
+          Tarifas claras con una lectura simple y elegante.
+        </h2>
+        <p class="mt-5 text-base leading-8 text-cip-body">{event.lunchNote}</p>
+      </div>
+
+      <div class="grid gap-5 md:grid-cols-3">
+        {event.prices.map((price, index) => (
+          <article class={`relative overflow-hidden rounded-3xl border p-6 shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-lift ${index === 0 ? "border-cip-gold/50 bg-cip-navy text-white" : "border-cip-border bg-cip-paper"}`}>
+            <div class="absolute inset-x-0 top-0 h-1 bg-cip-gold"></div>
+            <p class={`inline-flex rounded-full px-3 py-1 text-xs font-black uppercase tracking-wide ${index === 0 ? "bg-white/12 text-cip-maize" : "bg-cip-mist text-cip-green"}`}>
+              {price.highlight}
+            </p>
+            <h3 class={`mt-5 text-lg font-black ${index === 0 ? "text-white" : "text-cip-navy"}`}>{price.label}</h3>
+            <p class={`mt-3 text-4xl font-black ${index === 0 ? "text-cip-maize" : "text-cip-copper"}`}>{price.amount}</p>
+            <p class={`mt-4 text-sm leading-6 ${index === 0 ? "text-cip-cream/80" : "text-cip-body"}`}>{price.description}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

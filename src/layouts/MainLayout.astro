@@ -1,0 +1,25 @@
+---
+import "../styles/global.css";
+
+type Props = {
+  title: string;
+  description: string;
+};
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1C1815" />
+    <link rel="icon" type="image/svg+xml" href="/images/logos/congreso-logo.svg" />
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen bg-cip-cloud antialiased">
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,71 @@
+---
+import { event } from "../data/event";
+
+const navItems = [
+  ["Inicio", "#inicio"],
+  ["Ponentes", "#ponentes"],
+  ["Cronograma", "#cronograma"],
+  ["Auspiciadores", "#auspiciadores"],
+  ["Registro", "#registro"],
+  ["Contacto", "#contacto"]
+];
+---
+
+<header class="sticky top-0 z-40 border-b border-cip-border/70 bg-cip-cloud/92 shadow-[0_8px_28px_rgba(28,24,21,0.06)] backdrop-blur-xl">
+  <nav class="section-shell flex min-h-16 items-center justify-between gap-4 lg:min-h-[76px]">
+    <a href="#inicio" class="focus-ring flex items-center gap-3 rounded-full" aria-label="Ir al inicio">
+      <span class="rounded-full border border-cip-maize/35 bg-cip-ink p-1 shadow-soft">
+        <img src="/images/logos/congreso-logo.webp" alt="" class="h-10 w-10 rounded-full lg:h-11 lg:w-11" />
+      </span>
+      <span class="hidden max-w-64 leading-tight sm:block">
+        <span class="block text-[0.72rem] font-black uppercase tracking-[0.16em] text-cip-maize">Congreso 2026</span>
+        <span class="block text-sm font-black text-cip-ink">{event.subtitle}</span>
+      </span>
+    </a>
+
+    <div class="hidden items-center gap-1 rounded-full border border-cip-border/70 bg-white/35 p-1 shadow-sm lg:flex">
+      {navItems.map(([label, href]) => (
+        <a
+          href={href}
+          class="focus-ring rounded-full px-4 py-2 text-sm font-bold text-cip-body transition hover:bg-cip-ink hover:text-cip-cloud"
+        >
+          {label}
+        </a>
+      ))}
+    </div>
+
+    <a
+      href="#registro"
+      class="focus-ring hidden rounded-full bg-cip-copper px-5 py-3 text-sm font-black text-white shadow-gold transition hover:-translate-y-0.5 hover:bg-cip-maize hover:text-cip-ink lg:inline-flex"
+    >
+      Inscribirme
+    </a>
+
+    <details class="group relative lg:hidden">
+      <summary
+        class="focus-ring flex h-10 w-10 cursor-pointer list-none items-center justify-center rounded-full border border-cip-border bg-cip-cloud text-cip-ink shadow-sm marker:hidden"
+        aria-label="Abrir menu"
+        role="button"
+      >
+        <span class="sr-only">Menu</span>
+        <span class="block h-0.5 w-5 bg-current before:block before:h-0.5 before:w-5 before:-translate-y-1.5 before:bg-current before:content-[''] after:block after:h-0.5 after:w-5 after:translate-y-1 after:bg-current after:content-[''] group-open:rotate-45 group-open:before:translate-y-0 group-open:after:-translate-y-0.5 group-open:after:-rotate-90"></span>
+      </summary>
+      <div class="absolute right-0 mt-3 w-64 rounded-2xl border border-cip-border bg-cip-cloud p-2 shadow-lift">
+        {navItems.map(([label, href]) => (
+          <a
+            href={href}
+            class="focus-ring block rounded-xl px-4 py-3 text-sm font-bold text-cip-body hover:bg-cip-mist hover:text-cip-ink"
+          >
+            {label}
+          </a>
+        ))}
+        <a
+          href="#registro"
+          class="focus-ring mt-2 flex justify-center rounded-xl bg-cip-copper px-4 py-3 text-sm font-black text-white hover:bg-cip-maize hover:text-cip-ink"
+        >
+          Inscribirme
+        </a>
+      </div>
+    </details>
+  </nav>
+</header>

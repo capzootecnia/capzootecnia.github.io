@@ -1,0 +1,49 @@
+---
+import { event } from "../data/event";
+
+const links = [
+  ["Inicio", "#inicio"],
+  ["Ponentes", "#ponentes"],
+  ["Cronograma", "#cronograma"],
+  ["Auspiciadores", "#auspiciadores"],
+  ["Registro", "#registro"]
+];
+---
+
+<footer id="contacto" class="relative overflow-hidden bg-cip-ink py-16 text-white">
+  <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cip-gold/70 to-transparent"></div>
+  <div class="section-shell grid gap-10 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
+    <div>
+      <img src="/images/logos/congreso-logo.webp" alt="" class="h-16 w-16 rounded-full border border-cip-gold/40 bg-cip-navy p-1 shadow-soft" />
+      <h2 class="mt-6 max-w-lg text-2xl font-black leading-tight">{event.name}</h2>
+      <p class="mt-4 max-w-md text-sm leading-7 text-cip-cream/70">{event.motto}</p>
+      <p class="mt-6 text-sm font-black text-cip-maize">CIP Cusco / Capitulo de Ingenieria Zootecnica</p>
+      <p class="mt-2 text-sm text-cip-cream/70">{event.dates}</p>
+    </div>
+
+    <div>
+      <h3 class="text-sm font-black uppercase tracking-[0.16em] text-cip-maize">Contacto</h3>
+      <p class="mt-5 text-sm leading-7 text-cip-cream/70">{event.address}</p>
+      <a href={event.whatsapp.url} target="_blank" rel="noreferrer" class="focus-ring mt-4 block rounded-lg text-sm font-bold text-white hover:text-cip-copper">
+        WhatsApp: {event.whatsapp.label}
+      </a>
+      <a href={event.socials.facebook} target="_blank" rel="noreferrer" class="focus-ring mt-3 block rounded-lg text-sm font-bold text-white hover:text-cip-copper">
+        Facebook oficial
+      </a>
+    </div>
+
+    <div>
+      <h3 class="text-sm font-black uppercase tracking-[0.16em] text-cip-maize">Enlaces</h3>
+      <div class="mt-5 grid gap-2">
+        {links.map(([label, href]) => (
+          <a href={href} class="focus-ring rounded-lg py-1 text-sm font-bold text-cip-cream/70 transition hover:translate-x-1 hover:text-white">
+            {label}
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+  <div class="section-shell mt-12 border-t border-white/10 pt-6">
+    <p class="text-sm text-cip-cream/55">© 2026 Congreso Macrorregional de Ingenieria Zootecnia. Todos los derechos reservados.</p>
+  </div>
+</footer>

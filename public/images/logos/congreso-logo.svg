@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Logo del Congreso Macrorregional de Ingeniería Zootecnia">
+  <rect width="256" height="256" rx="64" fill="#0F2742"/>
+  <circle cx="128" cy="128" r="86" fill="#163A59" stroke="#C89B3C" stroke-width="10"/>
+  <path d="M76 154c24-64 54-96 91-96 15 0 28 5 39 15-53 8-84 35-93 81Z" fill="#F6F1E8"/>
+  <path d="M68 170c44 24 86 29 126 14 18-7 33-18 45-34-7 44-42 74-89 79-35 4-64-7-82-31Z" fill="#567A5C"/>
+  <path d="M118 79c20 22 30 45 30 70" stroke="#C89B3C" stroke-width="11" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,32 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import EventInfo from "../components/EventInfo.astro";
+import PricingCards from "../components/PricingCards.astro";
+import SpeakerBlocks from "../components/SpeakerBlocks";
+import ScheduleSection from "../components/ScheduleSection";
+import SponsorsSection from "../components/SponsorsSection";
+import RegistrationSection from "../components/RegistrationSection.astro";
+import FloatingContactButton from "../components/FloatingContactButton";
+import Footer from "../components/Footer.astro";
+import { event } from "../data/event";
+---
+
+<MainLayout
+  title={`${event.name} | ${event.subtitle}`}
+  description={`${event.subtitle}. ${event.motto}. ${event.dates} en ${event.place}, Cusco.`}
+>
+  <Header />
+  <main>
+    <Hero />
+    <EventInfo />
+    <PricingCards />
+    <SpeakerBlocks client:load />
+    <ScheduleSection client:load />
+    <SponsorsSection client:load />
+    <RegistrationSection />
+  </main>
+  <Footer />
+  <FloatingContactButton client:load />
+</MainLayout>

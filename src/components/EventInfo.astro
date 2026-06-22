@@ -1,0 +1,41 @@
+---
+import { event } from "../data/event";
+
+const items = [
+  ["Fecha", event.dates, "Dos jornadas academicas e institucionales.", "/images/icons/calendar.svg"],
+  ["Lugar", event.place, event.address, "/images/icons/location.svg"],
+  ["Modalidad", event.modality, "Encuentro presencial en la sede institucional.", "/images/icons/certificate.svg"],
+  ["Certificado", event.certificate, "Constancia para participantes registrados.", "/images/icons/certificate.svg"],
+  ["Feria", "Dia del Ingeniero Zootecnista", "Stands institucionales, empresas y productores locales.", "/images/icons/location.svg"],
+  ["Almuerzo", "Confraternidad opcional", event.lunchNote, "/images/icons/calendar.svg"]
+];
+---
+
+<section class="section-divider bg-cip-cream py-24">
+  <div class="section-shell">
+    <div class="grid gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
+      <div>
+        <p class="luxury-kicker">Informacion del evento</p>
+        <h2 class="mt-4 text-3xl font-black leading-tight text-cip-navy sm:text-4xl">
+          Todo lo esencial, presentado con claridad institucional.
+        </h2>
+      </div>
+      <p class="max-w-2xl text-base leading-8 text-cip-body">
+        Una experiencia presencial para conectar academia, innovacion, empresas y profesionales de la produccion animal de la region sur.
+      </p>
+    </div>
+
+    <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {items.map(([label, value, description, icon]) => (
+        <article class="group rounded-3xl border border-cip-border bg-cip-paper/80 p-6 shadow-soft transition duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-lift">
+          <div class="flex h-12 w-12 items-center justify-center rounded-2xl border border-cip-gold/25 bg-cip-warm shadow-sm">
+            <img src={icon} alt="" class="h-6 w-6" />
+          </div>
+          <p class="mt-6 text-xs font-black uppercase tracking-[0.18em] text-cip-gold">{label}</p>
+          <h3 class="mt-3 text-xl font-black leading-tight text-cip-navy">{value}</h3>
+          <p class="mt-3 text-sm leading-6 text-cip-body">{description}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
