@@ -14,12 +14,12 @@ export default function SponsorsSection() {
       <div className="section-shell">
         <div className="grid gap-10 lg:grid-cols-[0.78fr_1.22fr]">
           <div>
-            <p className="luxury-kicker">Auspiciadores</p>
+            <p className="luxury-kicker">Instituciones y marcas aliadas</p>
             <h2 className="mt-4 text-3xl font-black leading-tight text-cip-navy sm:text-4xl">
-              Aliados que impulsan innovacion, sostenibilidad y produccion animal.
+              Presencia empresarial e institucional vinculada al sector pecuario.
             </h2>
             <p className="mt-5 text-base leading-8 text-cip-body">
-              Un espacio institucional para marcas, empresas expositoras y organizaciones vinculadas al sector.
+              El congreso abre un espacio para auspiciadores, empresas expositoras, laboratorios, productores y organizaciones del rubro.
             </p>
             <a
               href={event.whatsapp.url}
@@ -27,7 +27,7 @@ export default function SponsorsSection() {
               rel="noreferrer"
               className="focus-ring mt-7 inline-flex rounded-full bg-cip-navy px-6 py-4 text-sm font-black text-cip-cream shadow-soft transition hover:-translate-y-0.5 hover:bg-cip-green"
             >
-              Se parte como auspiciador o expositor
+              Sé parte como auspiciador o expositor
             </a>
           </div>
 

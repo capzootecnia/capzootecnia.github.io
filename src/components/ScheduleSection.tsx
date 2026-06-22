@@ -21,9 +21,9 @@ export default function ScheduleSection() {
       <div className="section-shell">
         <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
           <div>
-            <p className="luxury-kicker">Cronograma</p>
+            <p className="luxury-kicker">Agenda del encuentro</p>
             <h2 className="mt-4 text-3xl font-black leading-tight text-cip-navy sm:text-4xl">
-              Dos dias de conferencias, feria y encuentro profesional.
+              Ponencias, feria, panel y cierre institucional en dos jornadas.
             </h2>
           </div>
 

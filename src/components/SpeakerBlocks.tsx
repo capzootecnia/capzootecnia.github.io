@@ -22,13 +22,13 @@ export default function SpeakerBlocks() {
       <div className="section-shell">
         <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
           <div>
-            <p className="luxury-kicker">Ponentes y bloques</p>
+            <p className="luxury-kicker">Programa academico</p>
             <h2 className="mt-4 text-3xl font-black leading-tight text-cip-navy sm:text-4xl">
-              Voces academicas, empresariales e institucionales en una agenda curada.
+              Especialistas invitados para mirar el presente y futuro de la zootecnia.
             </h2>
           </div>
           <p className="max-w-2xl text-base leading-8 text-cip-body">
-            Navega por los bloques del congreso y revisa temas, instituciones y detalles de cada participacion.
+            Revisa los bloques tematicos, conoce a los ponentes confirmados y ubica las sesiones de mayor interes para tu perfil profesional.
           </p>
         </div>
 
