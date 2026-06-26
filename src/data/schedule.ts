@@ -25,7 +25,7 @@ export type ScheduleDay = {
 };
 
 export const blockLabels: Record<ScheduleBlock, string> = {
-  academico: "Académico",
+  academico: "Academico",
   comercial: "Comercial",
   prospectiva: "Prospectiva",
   panel: "Panel",
@@ -38,7 +38,7 @@ export const blockLabels: Record<ScheduleBlock, string> = {
 export const schedule: ScheduleDay[] = [
   {
     id: "day-1",
-    label: "Día 1",
+    label: "Dia 1",
     date: "Viernes 17 de julio de 2026",
     theme: "Ponencias Magistrales",
     items: [
@@ -50,7 +50,7 @@ export const schedule: ScheduleDay[] = [
       {
         time: "09:00 - 09:20",
         title:
-          "Ceremonia inaugural - Palabras del presidente del Capítulo Ingeniería Zootécnica CIP Cusco",
+          "Ceremonia inaugural - Palabras del presidente del Capitulo Ingenieria Zootecnica CIP Cusco",
         block: "institucional"
       },
       {
@@ -61,15 +61,15 @@ export const schedule: ScheduleDay[] = [
       {
         time: "09:30 - 10:15",
         title:
-          "Monitoreo automático de alpacas y llamas alimentadas en pastizales de puna húmeda",
-        speaker: "Dr. Jim Cárdenas Rodríguez",
+          "Monitoreo automatico de alpacas y llamas alimentadas en pastizales de puna humeda",
+        speaker: "Dr. Jim Cardenas Rodriguez",
         block: "academico"
       },
       {
         time: "10:15 - 11:00",
         title:
-          "Monitoreo de salud y soportabilidad de pastizales con tecnología molecular y sensores remotos",
-        speaker: "Ph.D. Andrés Corsino Estrada Zúñiga",
+          "Monitoreo de salud y soportabilidad de pastizales con tecnologia molecular y sensores remotos",
+        speaker: "Ph.D. Andres Corsino Estrada Zuniga",
         block: "academico"
       },
       {
@@ -78,14 +78,8 @@ export const schedule: ScheduleDay[] = [
         block: "institucional"
       },
       {
-        time: "11:15 - 12:00",
-        title: "Producción y manejo técnico de cuyes",
-        speaker: "Ing. Guido Lezama",
-        block: "academico"
-      },
-      {
         time: "12:00 - 12:45",
-        title: "Sistemas de producción de cuyes",
+        title: "Sistemas de produccion de cuyes",
         speaker: "Ing. Omar Apaza",
         block: "academico"
       },
@@ -117,36 +111,36 @@ export const schedule: ScheduleDay[] = [
       {
         time: "18:30 - 19:30",
         title:
-          "Ceremonia de reconocimiento a profesionales destacados de la Ingeniería Zootécnica",
+          "Ceremonia de reconocimiento a profesionales destacados de la Ingenieria Zootecnica",
         block: "reconocimiento",
         description:
-          "Reconocimiento al Ing. Walter Antezana y al Ing. Dante Astete Canal."
+          "Reconocimiento a profesionales destacados de la Ingenieria Zootecnica."
       }
     ]
   },
   {
     id: "day-2",
-    label: "Día 2",
-    date: "Sábado 18 de julio de 2026",
+    label: "Dia 2",
+    date: "Sabado 18 de julio de 2026",
     theme: "Feria, Prospectiva y Almuerzo",
     items: [
       {
         time: "08:30 - 09:15",
         title: "Micronutrientes en pastizales",
-        speaker: "Ing. Hernán Jauregui",
+        speaker: "Ing. Hernan Jauregui",
         block: "prospectiva"
       },
       {
         time: "09:00 - 10:00",
         title:
-          "Feria por el Día del Ingeniero Zootecnista - Apertura e inauguración",
+          "Feria por el Dia del Ingeniero Zootecnista - Apertura e inauguracion",
         block: "feria"
       },
       {
         time: "09:15 - 10:15",
         title:
           "Prospectiva del Ingeniero Zootecnista a nivel internacional",
-        speaker: "Ing. Alan Villegas Peña",
+        speaker: "Ing. Alan Villegas Pena",
         block: "prospectiva"
       },
       {
@@ -163,21 +157,21 @@ export const schedule: ScheduleDay[] = [
       {
         time: "10:30 - 11:30",
         title:
-          "Legislación y ejercicio profesional del Ingeniero Zootecnista",
-        speaker: "Ing. Jaime Antonio Ruiz Béjar",
+          "Legislacion y ejercicio profesional del Ingeniero Zootecnista",
+        speaker: "Ing. Jaime Antonio Ruiz Bejar",
         block: "prospectiva"
       },
       {
         time: "11:30 - 12:30",
-        title: "Panel: Retos y oportunidades de la Ingeniería Zootécnica",
+        title: "Panel: Retos y oportunidades de la Ingenieria Zootecnica",
         block: "panel",
         description:
-          "Participan Ing. Jaime Antonio Ruiz Béjar, Ing. Alan Villegas Peña, demás ponentes invitados e Ing. Víctor López."
+          "Participan ponentes invitados y representantes institucionales del sector."
       },
       {
         time: "13:00 - 15:00",
         title:
-          "Almuerzo de confraternidad por el Día del Ingeniero Zootecnista",
+          "Almuerzo de confraternidad por el Dia del Ingeniero Zootecnista",
         block: "almuerzo"
       },
       {

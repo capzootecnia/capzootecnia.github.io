@@ -20,11 +20,11 @@ export type Speaker = {
 };
 
 // Cambia cada imagen por el archivo real subido a public/images/speakers.
-// Si todavía no hay foto confirmada, conserva este placeholder.
+// Si todavia no hay foto confirmada, conserva este placeholder.
 const placeholder = "/images/speakers/speaker-placeholder.webp";
 
 export const speakerBlocks: Record<SpeakerBlock, string> = {
-  academico: "Académico",
+  academico: "Academico",
   comercial: "Comercial y Empresarial",
   prospectiva: "Prospectiva",
   panel: "Panel",
@@ -34,40 +34,29 @@ export const speakerBlocks: Record<SpeakerBlock, string> = {
 export const speakers: Speaker[] = [
   {
     id: "jim-cardenas",
-    name: "Dr. Jim Cárdenas Rodríguez",
+    name: "Dr. Jim Cardenas Rodriguez",
     block: "academico",
     title: "Docente / Investigador",
     institution: "Por confirmar",
     topic:
-      "Monitoreo automático de las características de comportamiento de alpacas y llamas alimentadas en pastizales de puna húmeda de los Andes centrales.",
+      "Monitoreo automatico de las caracteristicas de comportamiento de alpacas y llamas alimentadas en pastizales de puna humeda de los Andes centrales.",
     description:
-      "Ponencia orientada al uso de monitoreo automático y análisis aplicado en sistemas altoandinos.",
+      "Ponencia orientada al uso de monitoreo automatico y analisis aplicado en sistemas altoandinos.",
     image: placeholder,
     featured: true
   },
   {
     id: "andres-estrada",
-    name: "Ph.D. Andrés Corsino Estrada Zúñiga",
+    name: "Ph.D. Andres Corsino Estrada Zuniga",
     block: "academico",
     title: "Investigador en pasturas",
     institution: "Por confirmar",
     topic:
-      "Monitoreo de la salud y soportabilidad de los pastizales en ecosistemas de puna húmeda utilizando tecnología molecular y sensores remotos.",
+      "Monitoreo de la salud y soportabilidad de los pastizales en ecosistemas de puna humeda utilizando tecnologia molecular y sensores remotos.",
     description:
-      "Tema enfocado en innovación, sensores remotos y sostenibilidad de pastizales de puna húmeda.",
+      "Tema enfocado en innovacion, sensores remotos y sostenibilidad de pastizales de puna humeda.",
     image: placeholder,
     featured: true
-  },
-  {
-    id: "guido-lezama",
-    name: "Ing. Guido Lezama",
-    block: "academico",
-    title: "Especialista invitado",
-    institution: "Por confirmar",
-    topic: "Producción y manejo técnico de cuyes.",
-    description:
-      "Sesión técnica sobre criterios de manejo productivo para sistemas de cuyes.",
-    image: placeholder
   },
   {
     id: "omar-apaza",
@@ -75,16 +64,16 @@ export const speakers: Speaker[] = [
     block: "academico",
     title: "Especialista invitado",
     institution: "Por confirmar",
-    topic: "Sistemas de producción de cuyes.",
+    topic: "Sistemas de produccion de cuyes.",
     description:
-      "Exposición dedicada a modelos productivos, eficiencia y buenas prácticas.",
+      "Exposicion dedicada a modelos productivos, eficiencia y buenas practicas.",
     image: placeholder
   },
   {
-    id: "consuelo-san-fernando",
-    name: "Sra. Consuelo / San Fernando",
+    id: "san-fernando",
+    name: "San Fernando",
     block: "comercial",
-    title: "Representante comercial",
+    title: "Empresa invitada",
     institution: "San Fernando",
     topic: "Tema por confirmar.",
     description:
@@ -93,40 +82,40 @@ export const speakers: Speaker[] = [
   },
   {
     id: "hernan-jauregui",
-    name: "Ing. Hernán Jauregui",
+    name: "Ing. Hernan Jauregui",
     block: "prospectiva",
     title: "Ponente invitado",
     institution: "Por confirmar",
     topic: "Micronutrientes en pastizales.",
     description:
-      "Perspectiva técnica sobre la nutrición de pastizales y su impacto en producción animal.",
+      "Perspectiva tecnica sobre la nutricion de pastizales y su impacto en produccion animal.",
     image: placeholder,
     phone: "+51 999 929 222",
     featured: true
   },
   {
     id: "alan-villegas",
-    name: "Ing. Alan Villegas Peña",
+    name: "Ing. Alan Villegas Pena",
     block: "prospectiva",
     title: "Ponente invitado",
     institution: "UBA / Argentina",
     country: "Argentina",
     topic: "Prospectiva del Ingeniero Zootecnista a nivel internacional.",
     description:
-      "Mirada internacional sobre oportunidades profesionales y evolución de la Ingeniería Zootécnica.",
+      "Mirada internacional sobre oportunidades profesionales y evolucion de la Ingenieria Zootecnica.",
     image: placeholder,
     phone: "+54 9 11 2872-4167",
     featured: true
   },
   {
     id: "jaime-ruiz",
-    name: "Ing. Jaime Antonio Ruiz Béjar",
+    name: "Ing. Jaime Antonio Ruiz Bejar",
     block: "prospectiva",
     title: "Decano Nacional CIP",
-    institution: "Colegio de Ingenieros del Perú",
-    topic: "Legislación y ejercicio profesional del Ingeniero Zootecnista.",
+    institution: "Colegio de Ingenieros del Peru",
+    topic: "Legislacion y ejercicio profesional del Ingeniero Zootecnista.",
     description:
-      "Sesión sobre marco profesional, ejercicio ético y fortalecimiento institucional.",
+      "Sesion sobre marco profesional, ejercicio etico y fortalecimiento institucional.",
     image: placeholder,
     phone: "+51 945 385 501",
     featured: true
@@ -135,33 +124,22 @@ export const speakers: Speaker[] = [
     id: "panel-retos",
     name: "Panel de especialistas invitados",
     block: "panel",
-    title: "Panel técnico",
+    title: "Panel tecnico",
     institution: "CIP Cusco",
-    topic: "Retos y oportunidades de la Ingeniería Zootécnica.",
+    topic: "Retos y oportunidades de la Ingenieria Zootecnica.",
     description:
-      "Participan ponentes invitados e Ing. Víctor López, Decano del Colegio de Ingenieros del Perú - Consejo Departamental Cusco.",
+      "Participan ponentes invitados y representantes institucionales del sector.",
     image: placeholder
   },
   {
-    id: "walter-antezana",
-    name: "Ing. Walter Antezana",
+    id: "reconocimiento-profesionales",
+    name: "Profesionales destacados",
     block: "reconocimiento",
-    title: "Profesional destacado",
+    title: "Ceremonia institucional",
     institution: "Por confirmar",
-    topic: "Reconocimiento a trayectoria profesional.",
+    topic: "Reconocimiento a la trayectoria profesional.",
     description:
-      "Ceremonia de reconocimiento a profesionales destacados de la Ingeniería Zootécnica.",
-    image: placeholder
-  },
-  {
-    id: "dante-astete",
-    name: "Ing. Dante Astete Canal",
-    block: "reconocimiento",
-    title: "Profesional destacado",
-    institution: "Por confirmar",
-    topic: "Reconocimiento a trayectoria profesional.",
-    description:
-      "Ceremonia de reconocimiento a profesionales destacados de la Ingeniería Zootécnica.",
+      "Ceremonia de reconocimiento a profesionales destacados de la Ingenieria Zootecnica.",
     image: placeholder
   }
 ];
