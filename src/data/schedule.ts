@@ -78,12 +78,6 @@ export const schedule: ScheduleDay[] = [
         block: "institucional"
       },
       {
-        time: "12:00 - 12:45",
-        title: "Sistemas de produccion de cuyes",
-        speaker: "Ing. Omar Apaza",
-        block: "academico"
-      },
-      {
         time: "12:45 - 13:00",
         title: "Ronda de preguntas",
         block: "academico"

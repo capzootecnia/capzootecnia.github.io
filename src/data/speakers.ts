@@ -59,17 +59,6 @@ export const speakers: Speaker[] = [
     featured: true
   },
   {
-    id: "omar-apaza",
-    name: "Ing. Omar Apaza",
-    block: "academico",
-    title: "Especialista invitado",
-    institution: "Por confirmar",
-    topic: "Sistemas de produccion de cuyes.",
-    description:
-      "Exposicion dedicada a modelos productivos, eficiencia y buenas practicas.",
-    image: placeholder
-  },
-  {
     id: "san-fernando",
     name: "San Fernando",
     block: "comercial",
