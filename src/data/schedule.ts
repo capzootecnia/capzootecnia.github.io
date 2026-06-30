@@ -133,7 +133,7 @@ export const schedule: ScheduleDay[] = [
       {
         time: "09:15 - 10:15",
         title:
-          "Prospectiva del Ingeniero Zootecnista a nivel internacional",
+          "Perspectiva económica de la zootecnia: fortaleciendo el ejercicio profesional",
         speaker: "Ing. Alan Villegas Pena",
         block: "prospectiva"
       },
@@ -163,15 +163,15 @@ export const schedule: ScheduleDay[] = [
           "Participan ponentes invitados y representantes institucionales del sector."
       },
       {
+        time: "12:30 - 13:00",
+        title: "Clausura CIP Cusco",
+        block: "institucional"
+      },
+      {
         time: "13:00 - 15:00",
         title:
           "Almuerzo de confraternidad por el Dia del Ingeniero Zootecnista",
         block: "almuerzo"
-      },
-      {
-        time: "15:00 - 15:30",
-        title: "Clausura CIP Cusco",
-        block: "institucional"
       }
     ]
   }

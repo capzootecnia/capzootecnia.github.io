@@ -89,7 +89,8 @@ export const speakers: Speaker[] = [
     title: "Ponente invitado",
     institution: "UBA / Argentina",
     country: "Argentina",
-    topic: "Prospectiva del Ingeniero Zootecnista a nivel internacional.",
+    topic:
+      "Perspectiva económica de la zootecnia: fortaleciendo el ejercicio profesional.",
     description:
       "Mirada internacional sobre oportunidades profesionales y evolucion de la Ingenieria Zootecnica.",
     image: placeholder,
