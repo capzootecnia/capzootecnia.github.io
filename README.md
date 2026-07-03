@@ -9,3 +9,4 @@ ss
 
 test 3 - archivmente
 cambios pc-a a pc-b
+prueba de cat 1 
