@@ -9,9 +9,6 @@ ss
 
 test 3 - archivmente
 cambios pc-a a pc-b
-<<<<<<< HEAD
 prueba de cat 1 
-=======
 entonces cambios 1 - 2 - 3 
 other change en el dash
->>>>>>> main
