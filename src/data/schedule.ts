@@ -73,16 +73,6 @@ export const schedule: ScheduleDay[] = [
         block: "academico"
       },
       {
-        time: "11:00 - 11:15",
-        title: "Receso Coffee Break",
-        block: "institucional"
-      },
-      {
-        time: "12:45 - 13:00",
-        title: "Ronda de preguntas",
-        block: "academico"
-      },
-      {
         time: "14:30 - 15:15",
         title: "San Fernando / tema por confirmar",
         block: "comercial"
@@ -93,22 +83,12 @@ export const schedule: ScheduleDay[] = [
         block: "comercial"
       },
       {
-        time: "16:00 - 16:15",
-        title: "Receso",
-        block: "institucional"
-      },
-      {
-        time: "18:00 - 18:30",
-        title: "Ronda de preguntas",
-        block: "comercial"
-      },
-      {
-        time: "18:30 - 19:30",
+        time: "17:00 - 19:00",
         title:
-          "Ceremonia de reconocimiento a profesionales destacados de la Ingenieria Zootecnica",
+          "Ceremonia de Colegiatura con participacion del Decano Nacional del Colegio de Ingenieros del Peru",
         block: "reconocimiento",
         description:
-          "Reconocimiento a profesionales destacados de la Ingenieria Zootecnica."
+          "Ceremonia de Colegiatura con participacion del Decano Nacional del Colegio de Ingenieros del Peru."
       }
     ]
   },
