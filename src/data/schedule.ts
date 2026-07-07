@@ -73,6 +73,17 @@ export const schedule: ScheduleDay[] = [
         block: "academico"
       },
       {
+        time: "09:00 - 10:00",
+        title: "EXPO ZOOTECNIA 2026 - Apertura e inauguracion",
+        block: "feria"
+      },
+      {
+        time: "10:00 - 13:00",
+        title:
+          "EXPO ZOOTECNIA 2026: stands institucionales, empresas del sector, laboratorios veterinarios y productores locales",
+        block: "feria"
+      },
+      {
         time: "14:30 - 15:15",
         title: "San Fernando / tema por confirmar",
         block: "comercial"
@@ -96,7 +107,7 @@ export const schedule: ScheduleDay[] = [
     id: "day-2",
     label: "Dia 2",
     date: "Sabado 18 de julio de 2026",
-    theme: "Feria, Prospectiva y Almuerzo",
+    theme: "Prospectiva y Almuerzo",
     items: [
       {
         time: "08:30 - 09:15",
@@ -105,23 +116,11 @@ export const schedule: ScheduleDay[] = [
         block: "prospectiva"
       },
       {
-        time: "09:00 - 10:00",
-        title:
-          "Feria por el Dia del Ingeniero Zootecnista - Apertura e inauguracion",
-        block: "feria"
-      },
-      {
         time: "09:15 - 10:15",
         title:
           "Perspectiva económica de la zootecnia: fortaleciendo el ejercicio profesional",
         speaker: "Ing. Alan Villegas Pena",
         block: "prospectiva"
-      },
-      {
-        time: "10:00 - 13:00",
-        title:
-          "Desarrollo de la feria: stands institucionales, empresas del sector, laboratorios veterinarios y productores locales",
-        block: "feria"
       },
       {
         time: "10:15 - 10:30",
