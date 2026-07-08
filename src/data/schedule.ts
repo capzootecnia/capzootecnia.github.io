@@ -3,7 +3,6 @@ export type ScheduleBlock =
   | "comercial"
   | "prospectiva"
   | "panel"
-  | "feria"
   | "almuerzo"
   | "reconocimiento"
   | "institucional";
@@ -29,7 +28,6 @@ export const blockLabels: Record<ScheduleBlock, string> = {
   comercial: "Comercial",
   prospectiva: "Prospectiva",
   panel: "Panel",
-  feria: "Feria",
   almuerzo: "Almuerzo",
   reconocimiento: "Reconocimiento",
   institucional: "Institucional"
@@ -71,17 +69,6 @@ export const schedule: ScheduleDay[] = [
           "Monitoreo de salud y soportabilidad de pastizales con tecnologia molecular y sensores remotos",
         speaker: "Ph.D. Andres Corsino Estrada Zuniga",
         block: "academico"
-      },
-      {
-        time: "09:00 - 10:00",
-        title: "EXPO ZOOTECNIA 2026 - Apertura e inauguracion",
-        block: "feria"
-      },
-      {
-        time: "10:00 - 13:00",
-        title:
-          "EXPO ZOOTECNIA 2026: stands institucionales, empresas del sector, laboratorios veterinarios y productores locales",
-        block: "feria"
       },
       {
         time: "14:30 - 15:15",

@@ -2,7 +2,7 @@ export type SponsorTier =
   | "principal"
   | "auspiciador"
   | "colaborador"
-  | "empresa-expositora";
+  | "empresa-aliada";
 
 export type Sponsor = {
   id: string;
@@ -20,7 +20,7 @@ const sponsorPlaceholder = "/images/sponsors/sponsor-placeholder.webp";
 export const sponsorTierLabels: Record<SponsorTier, string> = {
   principal: "Auspiciador principal",
   auspiciador: "Auspiciadores",
-  "empresa-expositora": "Empresas expositoras",
+  "empresa-aliada": "Empresas aliadas",
   colaborador: "Colaboradores"
 };
 
@@ -48,19 +48,19 @@ export const sponsors: Sponsor[] = [
   {
     id: "corina",
     name: "Corina",
-    tier: "empresa-expositora",
+    tier: "empresa-aliada",
     logo: sponsorPlaceholder
   },
   {
     id: "agp",
     name: "AGP",
-    tier: "empresa-expositora",
+    tier: "empresa-aliada",
     logo: sponsorPlaceholder
   },
   {
     id: "agrovet",
     name: "Agrovet",
-    tier: "empresa-expositora",
+    tier: "empresa-aliada",
     logo: sponsorPlaceholder
   },
   {

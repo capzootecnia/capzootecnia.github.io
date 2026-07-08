@@ -6,7 +6,6 @@ const blockStyles: Record<ScheduleBlock, string> = {
   comercial: "bg-[#FFF1D8] text-[#7A4B22] border-[#E1C899]",
   prospectiva: "bg-[#E5EEE4] text-cip-green border-[#C8D8C5]",
   panel: "bg-[#E8ECEF] text-cip-ink border-[#CDD4DB]",
-  feria: "bg-[#EFEEDB] text-[#65713F] border-[#D8D5AE]",
   almuerzo: "bg-[#F6E5D9] text-cip-clay border-[#E2C4B3]",
   reconocimiento: "bg-[#F3E6DC] text-[#815033] border-[#DDC7B9]",
   institucional: "bg-cip-warm text-cip-ink border-cip-border"
@@ -23,7 +22,7 @@ export default function ScheduleSection() {
           <div>
             <p className="luxury-kicker">Agenda del encuentro</p>
             <h2 className="mt-4 text-3xl font-black leading-tight text-cip-navy sm:text-4xl">
-              Ponencias, feria, panel y cierre institucional en dos jornadas.
+              Ponencias, panel y cierre institucional en dos jornadas.
             </h2>
           </div>
 

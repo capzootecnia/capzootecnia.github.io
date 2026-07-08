@@ -4,7 +4,7 @@ import { sponsors, sponsorTierLabels, type SponsorTier } from "../data/sponsors"
 const tierOrder: SponsorTier[] = [
   "principal",
   "auspiciador",
-  "empresa-expositora",
+  "empresa-aliada",
   "colaborador"
 ];
 
@@ -19,7 +19,7 @@ export default function SponsorsSection() {
               Presencia empresarial e institucional vinculada al sector pecuario.
             </h2>
             <p className="mt-5 text-base leading-8 text-cip-body">
-              El congreso abre un espacio para auspiciadores, empresas expositoras, laboratorios, productores y organizaciones del rubro.
+              El congreso abre un espacio para auspiciadores, empresas aliadas, laboratorios, productores y organizaciones del rubro.
             </p>
             <a
               href={event.whatsapp.url}
@@ -27,7 +27,7 @@ export default function SponsorsSection() {
               rel="noreferrer"
               className="focus-ring mt-7 inline-flex rounded-full bg-cip-navy px-6 py-4 text-sm font-black text-cip-cream shadow-soft transition hover:-translate-y-0.5 hover:bg-cip-green"
             >
-              Sé parte como auspiciador o expositor
+              Sé parte como auspiciador o aliado
             </a>
           </div>
 
