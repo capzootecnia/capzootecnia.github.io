@@ -28,18 +28,18 @@ export const event = {
   },
   prices: [
     {
-      id: "early",
-      label: "Inscripción temprana",
+      id: "certificate-general",
+      label: "Certificado general y profesionales",
       amount: "S/ 50.00",
-      description: "Disponible hasta el 30 de junio de 2026.",
-      highlight: "Hasta el 30 de junio"
+      description: "Costo del certificado para publico general y profesionales.",
+      highlight: "General y profesionales"
     },
     {
-      id: "regular",
-      label: "Inscripción regular",
-      amount: "S/ 70.00",
-      description: "Vigente desde el 1 de julio de 2026.",
-      highlight: "Desde el 1 de julio"
+      id: "certificate-students",
+      label: "Certificado estudiantes",
+      amount: "S/ 20.00",
+      description: "Costo del certificado para estudiantes.",
+      highlight: "Estudiantes"
     },
     {
       id: "lunch",
@@ -51,5 +51,5 @@ export const event = {
     }
   ] satisfies PriceItem[],
   lunchNote:
-    "El almuerzo es independiente de la inscripción. El participante puede inscribirse solo al congreso o al congreso + almuerzo."
+    "El almuerzo es independiente del certificado y es opcional para quienes deseen participar."
 };
