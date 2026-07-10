@@ -32,21 +32,21 @@ export const event = {
   prices: [
     {
       id: "certificate-professionals",
-      label: "Certificado profesionales e ingenieros",
+      label: "Profesionales y público en General",
       amount: "S/ 40.00",
-      description: "Costo del certificado para profesionales e ingenieros.",
-      highlight: "Profesionales e ingenieros"
+      description: "Costo del certificado para profesionales y público en general.",
+      highlight: "Profesionales y público en general"
     },
     {
       id: "certificate-students",
-      label: "Certificado estudiantes",
+      label: "Certificado Estudiantes",
       amount: "S/ 20.00",
       description: "Costo del certificado para estudiantes.",
       highlight: "Estudiantes"
     },
     {
       id: "lunch",
-      label: "Almuerzo de confraternidad",
+      label: "Almuerzo de Confraternidad",
       amount: "S/ 50.00",
       description:
         "Costo independiente para quienes deseen participar del almuerzo.",
