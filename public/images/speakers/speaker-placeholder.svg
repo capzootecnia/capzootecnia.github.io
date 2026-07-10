@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-label="Foto de ponente por confirmar">
-  <rect width="640" height="640" fill="#E6ECE7"/>
-  <circle cx="320" cy="250" r="108" fill="#163A59" opacity=".92"/>
-  <path d="M146 566c22-122 94-190 174-190s152 68 174 190Z" fill="#567A5C" opacity=".92"/>
-  <path d="M92 154c98-82 202-111 312-86 53 12 99 37 144 74" fill="none" stroke="#C89B3C" stroke-width="28" stroke-linecap="round" opacity=".85"/>
-  <text x="320" y="602" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="800" fill="#10233A">Foto por confirmar</text>
-</svg>
