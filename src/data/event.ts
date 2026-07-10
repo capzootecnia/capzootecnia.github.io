@@ -16,7 +16,10 @@ export const event = {
   modality: "Presencial",
   certificate: "Certificado de participación",
   // Reemplaza esta URL cuando el formulario oficial de Google Forms esté listo.
-  registrationUrl: "https://forms.gle/STMSJv81zwkXfWux7",
+  registrationUrls: {
+    professionals: "https://forms.gle/STMSJv81zwkXfWux7",
+    students: "https://forms.gle/NHKQ6WaiFatrMg649"
+  },
   whatsapp: {
     label: "+51 949 311 461",
     url: "https://wa.me/51949311461",
@@ -28,11 +31,11 @@ export const event = {
   },
   prices: [
     {
-      id: "certificate-general",
-      label: "Certificado general y profesionales",
-      amount: "S/ 50.00",
-      description: "Costo del certificado para publico general y profesionales.",
-      highlight: "General y profesionales"
+      id: "certificate-professionals",
+      label: "Certificado profesionales e ingenieros",
+      amount: "S/ 40.00",
+      description: "Costo del certificado para profesionales e ingenieros.",
+      highlight: "Profesionales e ingenieros"
     },
     {
       id: "certificate-students",

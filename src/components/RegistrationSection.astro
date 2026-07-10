@@ -13,22 +13,39 @@ import { event } from "../data/event";
         Solicita tu certificado para el Congreso Zootecnia 2026.
       </h2>
       <p class="mt-6 max-w-2xl text-base leading-8 text-cip-cream/90">
-        Completa el formulario oficial, selecciona el tipo de certificado y decide si deseas incluir el almuerzo de confraternidad.
+        Elige el formulario correspondiente a tu perfil para solicitar tu certificado. Así aseguramos que tu registro llegue al equipo indicado.
       </p>
-      <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+      <div class="mt-9 grid max-w-3xl gap-4 sm:grid-cols-2">
         <a
-          href={event.registrationUrl}
+          href={event.registrationUrls.professionals}
           target="_blank"
           rel="noreferrer"
-          class="focus-ring inline-flex justify-center rounded-full bg-cip-copper px-7 py-4 text-sm font-black text-white shadow-gold transition hover:-translate-y-0.5 hover:bg-cip-maize hover:text-cip-ink"
+          class="focus-ring group rounded-3xl border border-white/20 bg-white/12 p-5 text-left backdrop-blur transition hover:-translate-y-1 hover:bg-white/20"
         >
-          Solicitar certificado
+          <p class="text-xs font-black uppercase tracking-[0.16em] text-cip-maize">Profesionales e ingenieros</p>
+          <p class="mt-2 text-lg font-black">Inscripción profesional</p>
+          <p class="mt-2 text-sm leading-6 text-cip-cream/85">Certificado de participación · S/ 40.00</p>
+          <span class="mt-4 inline-flex text-sm font-black text-cip-maize group-hover:text-white">Ir al formulario →</span>
         </a>
+        <a
+          href={event.registrationUrls.students}
+          target="_blank"
+          rel="noreferrer"
+          class="focus-ring group rounded-3xl border border-cip-maize/60 bg-cip-maize p-5 text-left text-cip-ink shadow-gold transition hover:-translate-y-1 hover:bg-white"
+        >
+          <p class="text-xs font-black uppercase tracking-[0.16em] text-cip-clay">Estudiantes</p>
+          <p class="mt-2 text-lg font-black">Inscripción estudiantil</p>
+          <p class="mt-2 text-sm leading-6 text-cip-body">Certificado de participación · S/ 20.00</p>
+          <p class="mt-2 text-sm leading-6 text-cip-body">(opcional)</p>
+          <span class="mt-4 inline-flex text-sm font-black text-cip-clay">Ir al formulario →</span>
+        </a>
+      </div>
+      <div class="mt-4 flex flex-col gap-3 sm:flex-row">
         <a
           href={event.whatsapp.url}
           target="_blank"
           rel="noreferrer"
-          class="focus-ring inline-flex justify-center rounded-full border border-white/30 bg-white/10 px-7 py-4 text-sm font-black text-white backdrop-blur transition hover:bg-cip-cream hover:text-cip-navy"
+          class="focus-ring inline-flex w-fit justify-center rounded-full border border-white/30 bg-white/10 px-6 py-3 text-sm font-black text-white backdrop-blur transition hover:bg-cip-cream hover:text-cip-navy"
         >
           Consultar por WhatsApp
         </a>
