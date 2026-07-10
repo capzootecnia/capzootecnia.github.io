@@ -29,27 +29,27 @@ export const sponsors: Sponsor[] = [
     id: "cip-cusco",
     name: "CIP Cusco",
     tier: "principal",
-    logo: "/images/logos/cip-cusco.webp",
+    logo: "/images/logos/cip-cusco.png",
     description: "Sede institucional del congreso."
   },
   {
     id: "capitulo-zootecnia",
     name: "Capítulo de Ingeniería Zootécnica",
     tier: "principal",
-    logo: "/images/logos/capitulo-zootecnia.webp",
+    logo: "/images/logos/cap-zootecnia.jpg",
     description: "Organización académica e institucional."
   },
   {
     id: "san-fernando",
     name: "San Fernando",
     tier: "auspiciador",
-    logo: sponsorPlaceholder
+    logo: "/images/logos/san-fernando.png"
   },
   {
     id: "corina",
     name: "Corina",
     tier: "empresa-aliada",
-    logo: sponsorPlaceholder
+    logo: "/images/logos/corina.png"
   },
   {
     id: "agp",
