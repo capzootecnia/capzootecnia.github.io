@@ -42,7 +42,7 @@ export const speakers: Speaker[] = [
       "Monitoreo automatico de las caracteristicas de comportamiento de alpacas y llamas alimentadas en pastizales de puna humeda de los Andes centrales.",
     description:
       "Ponencia orientada al uso de monitoreo automatico y analisis aplicado en sistemas altoandinos.",
-    image: placeholder,
+    image: "/images/speakers/jim-cardenas.jpg",
     featured: true
   },
   {
@@ -55,7 +55,7 @@ export const speakers: Speaker[] = [
       "Monitoreo de la salud y soportabilidad de los pastizales en ecosistemas de puna humeda utilizando tecnologia molecular y sensores remotos.",
     description:
       "Tema enfocado en innovacion, sensores remotos y sostenibilidad de pastizales de puna humeda.",
-    image: placeholder,
+    image: "/images/speakers/andres-estrada.jpg",
     featured: true
   },
   {
@@ -67,7 +67,7 @@ export const speakers: Speaker[] = [
     topic: "Tema por confirmar.",
     description:
       "Espacio empresarial para compartir soluciones y perspectivas del sector.",
-    image: placeholder
+    image: "/images/speakers/san-fernando.webp"
   },
   {
     id: "hernan-jauregui",
@@ -106,7 +106,7 @@ export const speakers: Speaker[] = [
     topic: "Legislacion y ejercicio profesional del Ingeniero Zootecnista.",
     description:
       "Sesion sobre marco profesional, ejercicio etico y fortalecimiento institucional.",
-    image: placeholder,
+    image: "/images/speakers/jaime-ruiz.jpg",
     phone: "+51 945 385 501",
     featured: true
   },
