@@ -29,6 +29,16 @@ const phoneHref = profile?.contact?.phone.replace(/\D/g, "");
           </h1>
           <p class="mt-5 max-w-xl text-lg font-bold leading-7 text-cip-green">{speaker.professionalTitle}</p>
           {speaker.institution && <p class="mt-3 text-base font-bold text-cip-body">{speaker.institution}</p>}
+          {speaker.organizationLogo && (
+            <img
+              src={speaker.organizationLogo.src}
+              alt={speaker.organizationLogo.alt}
+              width="200"
+              height="70"
+              decoding="async"
+              class="mt-5 h-auto w-[200px] max-w-full object-contain object-left"
+            />
+          )}
           <p class="mt-7 max-w-xl text-base leading-7 text-cip-body sm:text-lg sm:leading-8">{speaker.description}</p>
           <div class="mt-8 border-l-4 border-cip-copper pl-4">
             <p class="text-xs font-black uppercase tracking-[0.15em] text-cip-copper">Tema de la ponencia</p>

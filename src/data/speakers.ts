@@ -50,6 +50,10 @@ export type Speaker = {
   description: string;
   image: string;
   imagePosition?: string;
+  organizationLogo?: {
+    src: string;
+    alt: string;
+  };
   profile?: SpeakerProfile;
 };
 
@@ -117,8 +121,12 @@ export const speakers: Speaker[] = [
     topic: "Gestión de producción avícola y operaciones agroindustriales.",
     description:
       "Gestión de plantas de incubación, producción de broilers, reproductoras y cerdos, con foco en indicadores, equipos y mejora continua.",
-    image: "/images/speakers/javier-pari.jpg",
+    image: "/images/speakers/ing.javier pari - produss.png",
     imagePosition: "50% 22%",
+    organizationLogo: {
+      src: "/images/banners/banner-produss.png",
+      alt: "Logo de Produss"
+    },
     profile: {
       contact: {
         email: "jpm.pari@gmail.com",
