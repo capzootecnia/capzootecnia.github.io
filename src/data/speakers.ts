@@ -50,6 +50,8 @@ export type Speaker = {
   description: string;
   image: string;
   imagePosition?: string;
+  profileImage?: string;
+  profileImagePosition?: string;
   organizationLogo?: {
     src: string;
     alt: string;
@@ -123,6 +125,8 @@ export const speakers: Speaker[] = [
       "Gestión de plantas de incubación, producción de broilers, reproductoras y cerdos, con foco en indicadores, equipos y mejora continua.",
     image: "/images/speakers/ing.javier pari - produss.png",
     imagePosition: "50% 22%",
+    profileImage: "/images/speakers/ing-javier-pari-perfil.png",
+    profileImagePosition: "50% 30%",
     organizationLogo: {
       src: "/images/banners/banner-produss.png",
       alt: "Logo de Produss"

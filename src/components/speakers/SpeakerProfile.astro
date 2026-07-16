@@ -11,6 +11,10 @@ const profile = speaker.profile;
 const imageStyle = speaker.imagePosition
   ? `object-position: ${speaker.imagePosition}`
   : undefined;
+const profileImage = speaker.profileImage ?? speaker.image;
+const profileImageStyle = speaker.profileImagePosition
+  ? `object-position: ${speaker.profileImagePosition}`
+  : imageStyle;
 const phoneHref = profile?.contact?.phone.replace(/\D/g, "");
 ---
 
@@ -47,11 +51,11 @@ const phoneHref = profile?.contact?.phone.replace(/\D/g, "");
         </div>
         <div class="min-h-[22rem] bg-cip-warm sm:min-h-[28rem] lg:min-h-full">
           <img
-            src={speaker.image}
+            src={profileImage}
             alt={`Retrato de ${speaker.name}`}
             width="960"
             height="1200"
-            style={imageStyle}
+            style={profileImageStyle}
             class="h-full w-full object-cover"
           />
         </div>
