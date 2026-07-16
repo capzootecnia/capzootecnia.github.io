@@ -233,14 +233,22 @@ export const speakers: Speaker[] = [
   },
   {
     slug: "hernan-jauregui",
-    name: "Ing. Hernán Jauregui",
+    name: "Ing. Hernán Jáuregui Valencia",
     block: "Prospectiva",
-    professionalTitle: "Ponente invitado",
-    institution: "Por confirmar",
-    topic: "Micronutrientes en pastizales.",
+    professionalTitle: "Ingeniero Zootecnista · Fundador y Gerente General de Pastisal",
+    institution: "Lima, Perú",
+    topic: "Zootecnistas con poder: educación y negocios.",
     description:
-      "Perspectiva técnica sobre la nutrición de pastizales y su impacto en la producción animal.",
-    image: placeholder
+      "Más de 25 años de trayectoria en nutrición animal, asesoramiento técnico y desarrollo de suplementos minerales para la producción pecuaria.",
+    image: "/images/speakers/hernan-jauregui.jpg",
+    imagePosition: "50% 22%",
+    profile: {
+      summary: [
+        "Ingeniero Zootecnista que convirtió el conocimiento en empresa. Es fundador y Gerente General de Pastisal, con más de 25 años de trayectoria en nutrición animal.",
+        "Ha desarrollado y liderado una línea propia de suplementos minerales para diferentes especies, con presencia comercial de Pastisal en diversas regiones del Perú y más del 80 % de participación.",
+        "Asesora a productores pecuarios en nutrición mineral y estrategias de alimentación. Asimismo, impulsa nuevas formulaciones para cuyes, bovinos, equinos y porcinos."
+      ]
+    }
   },
   {
     slug: "alan-villegas",
