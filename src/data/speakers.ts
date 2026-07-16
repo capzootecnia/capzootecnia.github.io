@@ -123,12 +123,12 @@ export const speakers: Speaker[] = [
     topic: "Gestión de producción avícola y operaciones agroindustriales.",
     description:
       "Gestión de plantas de incubación, producción de broilers, reproductoras y cerdos, con foco en indicadores, equipos y mejora continua.",
-    image: "/images/speakers/ing.javier pari - produss.png",
+    image: "/images/speakers/ing.javier pari - produss.webp",
     imagePosition: "50% 22%",
-    profileImage: "/images/speakers/ing-javier-pari-perfil.png",
+    profileImage: "/images/speakers/ing-javier-pari-perfil.webp",
     profileImagePosition: "50% 30%",
     organizationLogo: {
-      src: "/images/banners/banner-produss.png",
+      src: "/images/banners/banner-produss.webp",
       alt: "Logo de Produss"
     },
     profile: {
@@ -252,6 +252,57 @@ export const speakers: Speaker[] = [
     }
   },
   {
+    slug: "herbert-ortiz",
+    name: "Ing. Herbert Ortiz Herrera",
+    block: "Comercial y empresarial",
+    professionalTitle: "Ingeniero Zootecnista · Gerente de Nutrición",
+    institution: "LevAnia SAC",
+    topic: "Micotoxinas: el enemigo oculto, prevención y control.",
+    description:
+      "Especialista en nutrición animal y asesoría técnico-comercial, con 31 años de trayectoria profesional.",
+    image: "/images/speakers/ing-herbert-ortiz-card.webp",
+    imagePosition: "50% 22%",
+    profileImage: "/images/speakers/Ing-Herbert-ortiz.webp",
+    profileImagePosition: "50% 30%",
+    organizationLogo: {
+      src: "/images/banners/banner-levania.webp",
+      alt: "Logo de LevAnia"
+    },
+    profile: {
+      summary: [
+        "Ingeniero Zootecnista egresado hace 31 años de la Universidad Nacional Agraria La Molina. Actualmente es Gerente de Nutrición de LevAnia SAC.",
+        "Su trabajo se enfoca en el manejo de micotoxinas, su prevención y control, así como en la asesoría técnica y comercial para la producción animal."
+      ],
+      education: [
+        {
+          institution: "Universidad Nacional Agraria La Molina",
+          degree: "Ingeniero Zootecnista",
+          period: "31 años de trayectoria profesional"
+        }
+      ],
+      experience: [
+        {
+          company: "LevAnia SAC",
+          role: "Gerente de Nutrición",
+          period: "Actualidad",
+          description: "Especialista en prevención y control de micotoxinas en producción animal."
+        },
+        {
+          company: "GLOBALVET SAC · PHARTEC SAC · AGRIBRANDS PURINA",
+          role: "Asesor técnico comercial",
+          period: "Trayectoria profesional",
+          description: "Asesoría técnica y comercial orientada a la nutrición y producción animal."
+        },
+        {
+          company: "PRONAMACHCS Yauyos · Gloria SA Huacho · INIA Illpa Puno · Agro Puno · CARE Perú · Avícola Cocorico (Avinca)",
+          role: "Especialista y responsable de producción pecuaria",
+          period: "Trayectoria profesional",
+          description: "Experiencia en asistencia técnica, desarrollo productivo y gestión pecuaria."
+        }
+      ]
+    }
+  },
+  {
     slug: "hernan-jauregui",
     name: "Ing. Hernán Jáuregui Valencia",
     block: "Prospectiva",
@@ -322,7 +373,7 @@ export const speakers: Speaker[] = [
     topic: "Retos y oportunidades de la Ingeniería Zootécnica.",
     description:
       "Participan ponentes invitados y representantes institucionales del sector.",
-    image: "/images/banners/card-panel.png"
+    image: "/images/banners/card-panel.webp"
   },
   {
     slug: "reconocimiento-profesionales",
