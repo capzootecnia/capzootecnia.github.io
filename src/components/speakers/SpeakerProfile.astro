@@ -106,7 +106,7 @@ const phoneHref = profile?.contact?.phone.replace(/\D/g, "");
                   <div>
                     <p class="text-sm font-black leading-5 text-cip-navy">{education.degree}</p>
                     <p class="mt-1 text-sm leading-5 text-cip-body">{education.institution}</p>
-                    <p class="mt-2 text-xs font-black uppercase tracking-wide text-cip-green">{education.period}</p>
+                    {education.period && <p class="mt-2 text-xs font-black uppercase tracking-wide text-cip-green">{education.period}</p>}
                   </div>
                 ))}
               </div>

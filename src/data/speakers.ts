@@ -8,7 +8,7 @@ export type SpeakerBlock =
 type Education = {
   institution: string;
   degree: string;
-  period: string;
+  period?: string;
 };
 
 type Experience = {
@@ -254,14 +254,32 @@ export const speakers: Speaker[] = [
     slug: "alan-villegas",
     name: "Ing. Alan Villegas Peña",
     block: "Prospectiva",
-    professionalTitle: "Ponente invitado",
-    institution: "UBA / Argentina",
+    professionalTitle: "Mg. en Economía Agraria · Doctorando UBA",
+    institution: "Universidad de Buenos Aires · Argentina",
     country: "Argentina",
     topic:
       "Perspectiva económica de la zootecnia: fortaleciendo el ejercicio profesional.",
     description:
-      "Mirada internacional sobre oportunidades profesionales y evolución de la Ingeniería Zootécnica.",
-    image: placeholder
+      "Docente e investigador en economía agraria, especializado en producción animal, innovación tecnológica y valoración económica de recursos naturales.",
+    image: "/images/speakers/alan-villegas.jpg",
+    imagePosition: "50% 24%",
+    profile: {
+      summary: [
+        "Alan Villegas Peña es Ingeniero Zootecnista por la Universidad Nacional de San Antonio Abad del Cusco (UNSAAC), Magíster en Economía Agraria por la Universidad de Buenos Aires (FAUBA) y doctorando en la misma casa de estudios.",
+        "Es docente e investigador en la Cátedra de Economía Agraria de la Universidad de Buenos Aires, donde dicta los cursos de Costos Agrarios, Análisis de Proyectos de Inversión, Economía Agraria y Economía Aplicada al Agro y al Ambiente. También es becario doctoral del CONICET, con sede en el Instituto Nacional de Tecnología Agropecuaria (INTA).",
+        "Su actividad científica se centra en la evaluación económica de enfermedades animales y sus estrategias de control, sistemas de innovación tecnológica en la cadena de camélidos sudamericanos, análisis económico de sistemas ganaderos y valoración económica de recursos naturales. Ha publicado en revistas internacionales y participa en proyectos financiados por UBA, INTA, CONICET y FONCyT."
+      ],
+      education: [
+        {
+          institution: "Universidad Nacional de San Antonio Abad del Cusco (UNSAAC)",
+          degree: "Ingeniero Zootecnista"
+        },
+        {
+          institution: "Universidad de Buenos Aires (FAUBA)",
+          degree: "Magíster en Economía Agraria · Doctorando"
+        }
+      ]
+    }
   },
   {
     slug: "jaime-ruiz",
