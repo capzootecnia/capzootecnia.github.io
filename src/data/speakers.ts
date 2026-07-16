@@ -53,6 +53,14 @@ export type Speaker = {
   profile?: SpeakerProfile;
 };
 
+export type PanelParticipant = {
+  name: string;
+  role: string;
+  image: string;
+  imagePosition?: string;
+  profileSlug?: string;
+};
+
 const placeholder = "/images/speakers/speaker-placeholder.webp";
 
 export const speakers: Speaker[] = [
@@ -302,7 +310,7 @@ export const speakers: Speaker[] = [
     topic: "Retos y oportunidades de la Ingeniería Zootécnica.",
     description:
       "Participan ponentes invitados y representantes institucionales del sector.",
-    image: placeholder
+    image: "/images/banners/card-panel.png"
   },
   {
     slug: "reconocimiento-profesionales",
@@ -314,6 +322,40 @@ export const speakers: Speaker[] = [
     description:
       "Ceremonia de reconocimiento a profesionales destacados de la Ingeniería Zootécnica.",
     image: placeholder
+  }
+];
+
+export const panelParticipants: PanelParticipant[] = [
+  {
+    name: "Ing. Jaime Antonio Ruiz Béjar",
+    role: "Decano Nacional CIP",
+    image: "/images/speakers/jaime-ruiz.jpg",
+    imagePosition: "50% 20%",
+    profileSlug: "jaime-ruiz"
+  },
+  {
+    name: "Ing. Alan Villegas Peña",
+    role: "Docente e investigador · UBA",
+    image: "/images/speakers/alan-villegas.jpg",
+    imagePosition: "50% 24%",
+    profileSlug: "alan-villegas"
+  },
+  {
+    name: "Ing. Víctor López Durand",
+    role: "Decano CIP C.D. Cusco",
+    image: "/images/speakers/victor-lopez-durand.jpg",
+    imagePosition: "50% 24%"
+  },
+  {
+    name: "Ing. Docente de la UNSAAC",
+    role: "Participación por confirmar",
+    image: placeholder
+  },
+  {
+    name: "Ing. Félix Boza",
+    role: "Participante invitado",
+    image: "/images/speakers/felix-boza.jpg",
+    imagePosition: "50% 20%"
   }
 ];
 
