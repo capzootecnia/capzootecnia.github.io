@@ -1,0 +1,161 @@
+---
+import type { Speaker } from "../../data/speakers";
+import { event } from "../../data/event";
+
+type Props = {
+  speaker: Speaker;
+};
+
+const { speaker } = Astro.props;
+const profile = speaker.profile;
+const imageStyle = speaker.imagePosition
+  ? `object-position: ${speaker.imagePosition}`
+  : undefined;
+const phoneHref = profile?.contact?.phone.replace(/\D/g, "");
+---
+
+<main class="bg-cip-paper py-7 sm:py-10">
+  <div class="speaker-shell">
+    <a href="/#ponentes" class="focus-ring inline-flex min-h-11 items-center gap-2 text-sm font-black text-cip-navy transition hover:text-cip-copper">
+      <span aria-hidden="true">←</span> Volver a ponentes
+    </a>
+
+    <article class="mt-5">
+      <header class="grid overflow-hidden border-y border-cip-border bg-cip-cream lg:grid-cols-[1.15fr_0.85fr]">
+        <div class="flex flex-col justify-center px-6 py-10 sm:px-10 sm:py-14 lg:px-14">
+          <p class="luxury-kicker">Ponente invitado</p>
+          <h1 class="mt-4 max-w-xl text-4xl font-black leading-[0.98] tracking-tight text-cip-navy sm:text-6xl">
+            {speaker.name}
+          </h1>
+          <p class="mt-5 max-w-xl text-lg font-bold leading-7 text-cip-green">{speaker.professionalTitle}</p>
+          {speaker.institution && <p class="mt-3 text-base font-bold text-cip-body">{speaker.institution}</p>}
+          <p class="mt-7 max-w-xl text-base leading-7 text-cip-body sm:text-lg sm:leading-8">{speaker.description}</p>
+          <div class="mt-8 border-l-4 border-cip-copper pl-4">
+            <p class="text-xs font-black uppercase tracking-[0.15em] text-cip-copper">Tema de la ponencia</p>
+            <p class="mt-2 max-w-xl text-base font-black leading-6 text-cip-navy">{speaker.topic}</p>
+          </div>
+        </div>
+        <div class="min-h-[22rem] bg-cip-warm sm:min-h-[28rem] lg:min-h-full">
+          <img
+            src={speaker.image}
+            alt={`Retrato de ${speaker.name}`}
+            width="960"
+            height="1200"
+            style={imageStyle}
+            class="h-full w-full object-cover"
+          />
+        </div>
+      </header>
+
+      <div class="grid gap-12 py-12 lg:grid-cols-[minmax(0,1fr)_20rem] lg:gap-16 lg:py-16">
+        <div class="min-w-0">
+          <section aria-labelledby="perfil-resumen">
+            <p class="luxury-kicker">Trayectoria</p>
+            <h2 id="perfil-resumen" class="mt-3 text-3xl font-black tracking-tight text-cip-navy">Perfil profesional</h2>
+            <div class="mt-6 max-w-3xl space-y-5 text-base leading-8 text-cip-body sm:text-lg sm:leading-8">
+              {(profile?.summary ?? [speaker.description]).map((paragraph) => <p>{paragraph}</p>)}
+            </div>
+          </section>
+
+          <section class="mt-12 border-t border-cip-border pt-10" aria-labelledby="perfil-enfoque">
+            <p class="luxury-kicker">En el congreso</p>
+            <h2 id="perfil-enfoque" class="mt-3 text-3xl font-black tracking-tight text-cip-navy">Enfoque de la ponencia</h2>
+            <p class="mt-5 max-w-3xl text-xl font-bold leading-8 text-cip-green">{speaker.topic}</p>
+          </section>
+
+          {profile?.experience && (
+            <section class="mt-12 border-t border-cip-border pt-10" aria-labelledby="perfil-experiencia">
+              <p class="luxury-kicker">Trayectoria profesional</p>
+              <h2 id="perfil-experiencia" class="mt-3 text-3xl font-black tracking-tight text-cip-navy">Experiencia laboral</h2>
+              <ol class="mt-8 space-y-8 border-l border-cip-border pl-6 sm:pl-8">
+                {profile.experience.map((experience) => (
+                  <li class="relative">
+                    <span class="absolute -left-[1.93rem] top-1 h-3 w-3 rounded-full border-2 border-cip-paper bg-cip-copper sm:-left-[2.45rem]" aria-hidden="true"></span>
+                    <div class="flex flex-col gap-2 border-b border-cip-border pb-8 sm:flex-row sm:items-start sm:justify-between sm:gap-8">
+                      <div>
+                        <p class="text-xs font-black uppercase tracking-[0.15em] text-cip-copper">{experience.company}</p>
+                        <h3 class="mt-2 text-xl font-black leading-6 text-cip-navy">{experience.role}</h3>
+                      </div>
+                      <p class="shrink-0 text-sm font-black text-cip-green">{experience.period}</p>
+                    </div>
+                    <p class="mt-4 max-w-3xl text-base leading-7 text-cip-body">{experience.description}</p>
+                  </li>
+                ))}
+              </ol>
+            </section>
+          )}
+        </div>
+
+        <aside class="self-start border-t border-cip-border lg:sticky lg:top-6" aria-label="Información complementaria">
+          {profile?.contact && (
+            <section class="py-7">
+              <h2 class="text-sm font-black uppercase tracking-[0.15em] text-cip-copper">Contacto</h2>
+              <div class="mt-4 space-y-3 text-base leading-6 text-cip-body">
+                <a href={`mailto:${profile.contact.email}`} class="block break-all font-bold text-cip-navy transition hover:text-cip-copper">{profile.contact.email}</a>
+                <a href={`tel:+51${phoneHref}`} class="block font-bold text-cip-navy transition hover:text-cip-copper">{profile.contact.phone}</a>
+                <address class="not-italic">{profile.contact.address.map((line) => <span class="block">{line}</span>)}</address>
+              </div>
+            </section>
+          )}
+
+          {profile?.education && (
+            <section class="border-t border-cip-border py-7">
+              <h2 class="text-sm font-black uppercase tracking-[0.15em] text-cip-copper">Estudios</h2>
+              <div class="mt-5 space-y-6">
+                {profile.education.map((education) => (
+                  <div>
+                    <p class="text-sm font-black leading-5 text-cip-navy">{education.degree}</p>
+                    <p class="mt-1 text-sm leading-5 text-cip-body">{education.institution}</p>
+                    <p class="mt-2 text-xs font-black uppercase tracking-wide text-cip-green">{education.period}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {profile?.skills && (
+            <section class="border-t border-cip-border py-7">
+              <h2 class="text-sm font-black uppercase tracking-[0.15em] text-cip-copper">Habilidades</h2>
+              <ul class="mt-4 grid grid-cols-2 gap-x-4 gap-y-3 text-sm font-bold leading-5 text-cip-body">
+                {profile.skills.map((skill) => <li>{skill}</li>)}
+              </ul>
+            </section>
+          )}
+
+          {profile?.languages && (
+            <section class="border-t border-cip-border py-7">
+              <h2 class="text-sm font-black uppercase tracking-[0.15em] text-cip-copper">Idiomas</h2>
+              <ul class="mt-4 space-y-2 text-sm font-bold text-cip-body">
+                {profile.languages.map((language) => <li>{language}</li>)}
+              </ul>
+            </section>
+          )}
+
+          {profile?.references && (
+            <section class="border-t border-cip-border py-7">
+              <h2 class="text-sm font-black uppercase tracking-[0.15em] text-cip-copper">Referencias</h2>
+              <div class="mt-5 space-y-6">
+                {profile.references.map((reference) => (
+                  <div>
+                    <p class="text-sm font-black leading-5 text-cip-navy">{reference.name}</p>
+                    <p class="mt-1 text-sm leading-5 text-cip-body">{reference.role}</p>
+                    {reference.email && <a href={`mailto:${reference.email}`} class="mt-2 block break-all text-sm font-bold text-cip-green hover:text-cip-copper">{reference.email}</a>}
+                    <a href={`tel:+51${reference.phone.replace(/\D/g, "")}`} class="mt-1 block text-sm font-bold text-cip-green hover:text-cip-copper">{reference.phone}</a>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+        </aside>
+      </div>
+
+      <footer class="flex flex-col gap-4 border-t border-cip-border py-10 sm:flex-row sm:items-center sm:justify-between">
+        <p class="max-w-xl text-base leading-7 text-cip-body">Conoce a los especialistas que impulsan el presente y futuro de la zootecnia.</p>
+        <div class="flex flex-col gap-3 sm:flex-row">
+          <a href="/#ponentes" class="focus-ring inline-flex min-h-11 items-center justify-center border border-cip-border px-5 text-sm font-black text-cip-navy transition hover:bg-cip-warm">Volver a ponentes</a>
+          <a href={event.registrationUrls.professionals} class="focus-ring inline-flex min-h-11 items-center justify-center bg-cip-copper px-5 text-sm font-black text-white transition hover:bg-cip-green">Inscribirme al congreso</a>
+        </div>
+      </footer>
+    </article>
+  </div>
+</main>

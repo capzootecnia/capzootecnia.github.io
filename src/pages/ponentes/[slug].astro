@@ -1,0 +1,18 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import SpeakerProfile from "../../components/speakers/SpeakerProfile.astro";
+import { speakers } from "../../data/speakers";
+
+export function getStaticPaths() {
+  return speakers.map((speaker) => ({
+    params: { slug: speaker.slug },
+    props: { speaker }
+  }));
+}
+
+const { speaker } = Astro.props;
+---
+
+<MainLayout title={`${speaker.name} | Congreso Macrorregional de Ingeniería Zootecnia 2026`} description={speaker.description}>
+  <SpeakerProfile speaker={speaker} />
+</MainLayout>

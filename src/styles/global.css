@@ -38,6 +38,32 @@ img {
   margin-inline: auto;
 }
 
+.speaker-shell {
+  width: min(1240px, calc(100% - 36px));
+  margin-inline: auto;
+}
+
+.speaker-card {
+  border-radius: 0.9rem;
+}
+
+@media (min-width: 640px) {
+  .speaker-card {
+    border-radius: 1.15rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
 .focus-ring {
   outline: 2px solid transparent;
   outline-offset: 3px;

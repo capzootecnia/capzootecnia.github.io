@@ -1,0 +1,53 @@
+---
+import { speakers, type SpeakerBlock } from "../../data/speakers";
+import SpeakerCard from "./SpeakerCard.astro";
+
+const blocks: SpeakerBlock[] = [
+  "Académico",
+  "Comercial y empresarial",
+  "Prospectiva",
+  "Panel",
+  "Reconocimientos"
+];
+---
+
+<section id="ponentes" class="section-divider bg-cip-paper py-20 sm:py-24">
+  <div class="speaker-shell">
+    <div class="max-w-3xl">
+      <p class="luxury-kicker">Expertos invitados</p>
+      <h2 class="mt-4 text-4xl font-black leading-[1.04] tracking-tight text-cip-navy sm:text-5xl">
+        Ponentes del congreso
+      </h2>
+      <p class="mt-6 max-w-2xl text-base leading-7 text-cip-body sm:text-lg sm:leading-8">
+        Voces que conectan investigación, producción animal, innovación y desarrollo profesional para impulsar la zootecnia en la región sur.
+      </p>
+    </div>
+
+    <div class="mt-14 space-y-16">
+      {blocks.map((block) => {
+        const group = speakers.filter((speaker) => speaker.block === block);
+        const gridClass =
+          group.length === 1
+            ? "grid w-full max-w-[320px]"
+            : group.length === 2
+              ? "mx-auto grid w-full max-w-[640px] gap-4 sm:grid-cols-2"
+              : "grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4";
+        if (!group.length) return null;
+
+        return (
+          <section aria-labelledby={`speaker-block-${block.replaceAll(" ", "-").toLowerCase()}`}>
+            <div class="mb-6 flex items-center gap-4">
+              <h3 id={`speaker-block-${block.replaceAll(" ", "-").toLowerCase()}`} class="text-sm font-black uppercase tracking-[0.16em] text-cip-copper">
+                {block}
+              </h3>
+              <div class="h-px flex-1 bg-cip-border"></div>
+            </div>
+            <div class={gridClass}>
+              {group.map((speaker) => <SpeakerCard speaker={speaker} />)}
+            </div>
+          </section>
+        );
+      })}
+    </div>
+  </div>
+</section>

@@ -4,7 +4,7 @@ import Header from "../components/Header.astro";
 import Hero from "../components/Hero.astro";
 import EventInfo from "../components/EventInfo.astro";
 import PricingCards from "../components/PricingCards.astro";
-import SpeakerBlocks from "../components/SpeakerBlocks";
+import SpeakersSection from "../components/speakers/SpeakersSection.astro";
 import ScheduleSection from "../components/ScheduleSection";
 import SponsorsSection from "../components/SponsorsSection";
 import RegistrationSection from "../components/RegistrationSection.astro";
@@ -22,7 +22,7 @@ import { event } from "../data/event";
     <Hero />
     <EventInfo />
     <PricingCards />
-    <SpeakerBlocks client:load />
+    <SpeakersSection />
     <ScheduleSection client:load />
     <SponsorsSection client:load />
     <RegistrationSection />
