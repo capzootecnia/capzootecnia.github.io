@@ -1,0 +1,36 @@
+---
+import { panelParticipants } from "../../data/speakers";
+---
+
+<section aria-labelledby="speaker-block-panel">
+  <div class="max-w-3xl">
+    <p class="luxury-kicker">Panel técnico</p>
+    <h1 id="speaker-block-panel" class="mt-4 text-4xl font-black leading-[1.04] tracking-tight text-cip-navy sm:text-5xl">Retos y oportunidades de la Ingeniería Zootécnica</h1>
+    <p class="mt-5 text-base leading-7 text-cip-body sm:text-lg sm:leading-8">Un espacio de diálogo con especialistas invitados, representantes institucionales y academia.</p>
+  </div>
+
+  <div class="panel-participants-grid mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+    {panelParticipants.map((participant, index) => {
+      const imageStyle = participant.imagePosition ? `object-position: ${participant.imagePosition}` : undefined;
+      const cardClass = "panel-member group relative block aspect-[4/5] overflow-hidden bg-cip-ink";
+      const content = (
+        <>
+          <img src={participant.image} alt={`Retrato de ${participant.name}`} width="900" height="1200" loading="lazy" decoding="async" style={imageStyle} class="h-full w-full object-cover transition duration-500 group-hover:scale-[1.06] motion-reduce:transition-none" />
+          <div class="absolute inset-0 bg-gradient-to-t from-cip-ink via-cip-ink/25 to-transparent transition duration-500 group-hover:from-cip-ink/95 motion-reduce:transition-none"></div>
+          <div class="absolute inset-x-0 bottom-0 translate-y-1 p-5 text-white transition duration-300 group-hover:translate-y-0 motion-reduce:transition-none">
+            <p class="text-xs font-black uppercase tracking-[0.15em] text-cip-maize">Panelista {String(index + 1).padStart(2, "0")}</p>
+            <h2 class="mt-2 text-xl font-black leading-tight">{participant.name}</h2>
+            <p class="mt-2 text-sm font-bold leading-5 text-cip-cream/90">{participant.role}</p>
+            {participant.profileSlug && <span class="mt-4 inline-flex items-center gap-2 text-sm font-black text-cip-maize transition duration-300 group-hover:translate-x-1 motion-reduce:transition-none">Ver perfil <span aria-hidden="true">→</span></span>}
+          </div>
+        </>
+      );
+
+      return participant.profileSlug ? (
+        <a href={`/ponentes/${participant.profileSlug}`} class={`${cardClass} focus-ring`} aria-label={`Ver perfil de ${participant.name}`}>{content}</a>
+      ) : (
+        <article class={cardClass}>{content}</article>
+      );
+    })}
+  </div>
+</section>

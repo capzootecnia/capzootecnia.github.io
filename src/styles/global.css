@@ -47,9 +47,33 @@ img {
   border-radius: 0.9rem;
 }
 
+.panel-member {
+  border-radius: 0.75rem;
+}
+
+.panel-participants-grid {
+  animation: panel-participants-reveal 280ms ease-out both;
+}
+
+@keyframes panel-participants-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (min-width: 640px) {
   .speaker-card {
     border-radius: 1.15rem;
+  }
+
+  .panel-member {
+    border-radius: 1rem;
   }
 }
 
@@ -61,6 +85,10 @@ img {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+  }
+
+  .panel-participants-grid {
+    animation: none;
   }
 }
 

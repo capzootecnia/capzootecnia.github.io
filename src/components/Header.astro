@@ -9,11 +9,14 @@ const navItems = [
   ["Registro", "#registro"],
   ["Contacto", "#contacto"]
 ];
+
+const isProfilePage = Astro.url.pathname.startsWith("/ponentes/");
+const pageHref = (hash: string) => (isProfilePage ? `/${hash}` : hash);
 ---
 
 <header class="sticky top-0 z-40 border-b border-cip-border/80 bg-[#F4EFE7]/95 shadow-[0_8px_28px_rgba(28,24,21,0.05)] backdrop-blur-xl">
   <nav class="section-shell flex min-h-16 items-center justify-between gap-4 lg:min-h-[76px]">
-    <a href="#inicio" class="focus-ring flex items-center gap-3 rounded-full" aria-label="Ir al inicio">
+    <a href={pageHref("#inicio")} class="focus-ring flex items-center gap-3 rounded-full" aria-label="Ir al inicio">
       <span class="rounded-full border border-cip-copper/35 bg-white p-1 shadow-[0_8px_24px_rgba(28,24,21,0.14)] ring-1 ring-white/90">
         <img src="/images/logos/congreso-logo.webp" alt="" class="h-10 w-10 rounded-full lg:h-11 lg:w-11" />
       </span>
@@ -26,7 +29,7 @@ const navItems = [
     <div class="hidden items-center gap-1 rounded-full border border-cip-border/70 bg-white/35 p-1 shadow-sm lg:flex">
       {navItems.map(([label, href]) => (
         <a
-          href={href}
+          href={pageHref(href)}
           class="focus-ring rounded-full px-4 py-2 text-sm font-bold text-cip-body transition hover:bg-cip-ink hover:text-cip-cloud"
         >
           {label}
@@ -35,7 +38,7 @@ const navItems = [
     </div>
 
     <a
-      href="#registro"
+      href={pageHref("#registro")}
       class="focus-ring hidden rounded-full bg-cip-copper px-5 py-3 text-sm font-black text-white shadow-gold transition hover:-translate-y-0.5 hover:bg-cip-maize hover:text-cip-ink lg:inline-flex"
     >
       Inscribirme
@@ -53,14 +56,14 @@ const navItems = [
       <div class="absolute right-0 mt-3 w-64 rounded-2xl border border-cip-border bg-cip-cloud p-2 shadow-lift">
         {navItems.map(([label, href]) => (
           <a
-            href={href}
+            href={pageHref(href)}
             class="focus-ring block rounded-xl px-4 py-3 text-sm font-bold text-cip-body hover:bg-cip-mist hover:text-cip-ink"
           >
             {label}
           </a>
         ))}
         <a
-          href="#registro"
+          href={pageHref("#registro")}
           class="focus-ring mt-2 flex justify-center rounded-xl bg-cip-copper px-4 py-3 text-sm font-black text-white hover:bg-cip-maize hover:text-cip-ink"
         >
           Inscribirme

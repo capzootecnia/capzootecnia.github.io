@@ -1,10 +1,11 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
+import Header from "../../components/Header.astro";
 import SpeakerProfile from "../../components/speakers/SpeakerProfile.astro";
 import { speakers } from "../../data/speakers";
 
 export function getStaticPaths() {
-  return speakers.map((speaker) => ({
+  return speakers.filter((speaker) => speaker.slug !== "panel-retos").map((speaker) => ({
     params: { slug: speaker.slug },
     props: { speaker }
   }));
@@ -14,5 +15,6 @@ const { speaker } = Astro.props;
 ---
 
 <MainLayout title={`${speaker.name} | Congreso Macrorregional de Ingeniería Zootecnia 2026`} description={speaker.description}>
+  <div class="hidden lg:block"><Header /></div>
   <SpeakerProfile speaker={speaker} />
 </MainLayout>

@@ -1,0 +1,22 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import Header from "../../components/Header.astro";
+import PanelParticipants from "../../components/speakers/PanelParticipants.astro";
+---
+
+<MainLayout
+  title="Panel de especialistas invitados | Congreso Macrorregional de Ingeniería Zootecnia 2026"
+  description="Panel técnico: retos y oportunidades de la Ingeniería Zootécnica."
+>
+  <div class="hidden lg:block"><Header /></div>
+  <main class="bg-cip-paper py-7 sm:py-10">
+    <div class="speaker-shell">
+      <a href="/#ponentes" class="focus-ring inline-flex min-h-11 items-center gap-2 text-sm font-black text-cip-navy transition hover:text-cip-copper">
+        <span aria-hidden="true">←</span> Volver a ponentes
+      </a>
+      <div class="mt-5 border-y border-cip-border py-10 sm:py-14">
+        <PanelParticipants />
+      </div>
+    </div>
+  </main>
+</MainLayout>
