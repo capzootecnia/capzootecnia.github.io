@@ -101,6 +101,17 @@ const phoneHref = profile?.contact?.phone.replace(/\D/g, "");
         </div>
 
         <aside class="self-start border-t border-cip-border lg:sticky lg:top-6" aria-label="Información complementaria">
+          {profile?.generalInfo && (
+            <section class="py-7">
+              <h2 class="text-sm font-black uppercase tracking-[0.15em] text-cip-copper">Datos generales</h2>
+              <div class="mt-4 space-y-3 text-base leading-6 text-cip-body">
+                {profile.generalInfo.birthDate && <p><span class="block text-xs font-black uppercase tracking-wide text-cip-green">Fecha de nacimiento</span>{profile.generalInfo.birthDate}</p>}
+                {profile.generalInfo.cipNumber && <p><span class="block text-xs font-black uppercase tracking-wide text-cip-green">N.° CIP</span>{profile.generalInfo.cipNumber}</p>}
+                {profile.generalInfo.email && <a href={`mailto:${profile.generalInfo.email}`} class="block break-all font-bold text-cip-navy transition hover:text-cip-copper">{profile.generalInfo.email}</a>}
+              </div>
+            </section>
+          )}
+
           {profile?.contact && (
             <section class="py-7">
               <h2 class="text-sm font-black uppercase tracking-[0.15em] text-cip-copper">Contacto</h2>
@@ -124,6 +135,15 @@ const phoneHref = profile?.contact?.phone.replace(/\D/g, "");
                   </div>
                 ))}
               </div>
+            </section>
+          )}
+
+          {profile?.additionalInfo && (
+            <section class="border-t border-cip-border py-7">
+              <h2 class="text-sm font-black uppercase tracking-[0.15em] text-cip-copper">Información adicional</h2>
+              <ul class="mt-4 space-y-3 text-sm leading-6 text-cip-body">
+                {profile.additionalInfo.map((item) => <li>{item}</li>)}
+              </ul>
             </section>
           )}
 

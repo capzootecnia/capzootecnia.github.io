@@ -25,7 +25,14 @@ type Reference = {
   email?: string;
 };
 
+type GeneralInfo = {
+  birthDate?: string;
+  email?: string;
+  cipNumber?: string;
+};
+
 export type SpeakerProfile = {
+  generalInfo?: GeneralInfo;
   contact?: {
     email: string;
     phone: string;
@@ -34,6 +41,7 @@ export type SpeakerProfile = {
   summary?: string[];
   education?: Education[];
   experience?: Experience[];
+  additionalInfo?: string[];
   skills?: string[];
   languages?: string[];
   references?: Reference[];
@@ -106,13 +114,67 @@ export const speakers: Speaker[] = [
     name: "Ph.D. Andrés Corsino Estrada Zúñiga",
     block: "Académico",
     professionalTitle: "Investigador en pasturas",
-    institution: "Por confirmar",
+    institution: "Universidad Nacional de San Antonio Abad del Cusco",
     topic:
       "Monitoreo de la salud y soportabilidad de los pastizales en ecosistemas de puna húmeda utilizando tecnología molecular y sensores remotos.",
     description:
       "Una mirada a la innovación, los sensores remotos y la sostenibilidad de los pastizales altoandinos.",
-    image: "/images/speakers/andres-estrada.jpg",
-    imagePosition: "50% 28%"
+    image: "/images/speakers/andres-estrada.webp",
+    imagePosition: "50% 28%",
+    profile: {
+      generalInfo: {
+        birthDate: "04 de febrero de 1965",
+        email: "andres.estrada@unsaac.edu.pe"
+      },
+      summary: [
+        "Ingeniero Zootecnista, magíster en Gestión en Desarrollo Sustentable y doctor en Desarrollo Humano y Sustentable. Su trayectoria integra investigación, docencia e innovación tecnológica para el desarrollo pecuario y territorial.",
+        "Actualmente es docente asociado a dedicación exclusiva en la Universidad Nacional de San Antonio Abad del Cusco."
+      ],
+      education: [
+        {
+          institution: "Universidad Católica de Temuco",
+          degree: "Magíster en Gestión en Desarrollo Sustentable"
+        },
+        {
+          institution: "Universidad Bolivariana, República de Chile",
+          degree: "Doctor en Desarrollo Humano y Sustentable"
+        },
+        {
+          institution: "Universidad Nacional de San Antonio Abad del Cusco",
+          degree: "Ingeniero Zootecnista"
+        },
+        {
+          institution: "Universidad Nacional de San Antonio Abad del Cusco",
+          degree: "Bachiller en Ciencias Agrarias"
+        }
+      ],
+      experience: [
+        {
+          company: "Universidad Nacional de San Antonio Abad del Cusco",
+          role: "Docente asociado a dedicación exclusiva",
+          period: "Mayo de 2010 – Actualidad",
+          description: "Investigación y docencia universitaria."
+        },
+        {
+          company: "Centro Bartolomé de las Casas",
+          role: "Investigador",
+          period: "2009",
+          description: "Investigación en praderas naturales, agua, territorio y cambio climático."
+        },
+        {
+          company: "Intercooperation Fundación Suiza para el Desarrollo y la Cooperación Internacional",
+          role: "Asesor en innovación tecnológica",
+          period: "Agosto de 2001 – Diciembre de 2009",
+          description: "Responsable del área de innovación tecnológica del proyecto MASAL, en el marco del convenio COSUDE–MINAG."
+        },
+        {
+          company: "PISA-COPASA y PDR COPASA",
+          role: "Responsable del área de innovación tecnológica pecuaria",
+          period: "Febrero de 1991 – Julio de 2001",
+          description: "Responsable de investigación pecuaria y del desarrollo de I+D+i en puna seca."
+        }
+      ]
+    }
   },
   {
     slug: "javier-pari",
@@ -356,13 +418,116 @@ export const speakers: Speaker[] = [
     slug: "jaime-ruiz",
     name: "Ing. Jaime Antonio Ruiz Béjar",
     block: "Prospectiva",
-    professionalTitle: "Decano Nacional CIP",
+    professionalTitle: "Doctor en Ciencias Veterinarias · Decano Nacional CIP",
     institution: "Colegio de Ingenieros del Perú",
     topic: "Legislación y ejercicio profesional del Ingeniero Zootecnista.",
     description:
       "Sesión sobre marco profesional, ejercicio ético y fortalecimiento institucional.",
     image: "/images/speakers/jaime-ruiz.jpg",
-    imagePosition: "50% 20%"
+    imagePosition: "50% 20%",
+    profile: {
+      generalInfo: {
+        birthDate: "18 de enero de 1968 · Lima",
+        cipNumber: "56888"
+      },
+      summary: [
+        "Doctor en Ciencias Veterinarias, magíster en Producción Animal e Ingeniero Zootecnista. Cuenta con una amplia trayectoria académica y de gestión universitaria, así como en la representación institucional de la profesión.",
+        "Ha ejercido cargos directivos en universidades y en el Colegio de Ingenieros del Perú, impulsando la investigación, la formación de posgrado y el desarrollo de la zootecnia."
+      ],
+      education: [
+        {
+          institution: "Universidad Austral de Chile",
+          degree: "Doctor en Ciencias Veterinarias",
+          period: "2010"
+        },
+        {
+          institution: "Universidad Nacional Agraria La Molina",
+          degree: "Magíster en Producción Animal",
+          period: "1999"
+        },
+        {
+          institution: "Universidad Nacional Agraria La Molina",
+          degree: "Ingeniero Zootecnista",
+          period: "1997"
+        },
+        {
+          institution: "Universidad Nacional Agraria La Molina",
+          degree: "Bachiller en Ciencias: Zootecnia",
+          period: "1992"
+        },
+        {
+          institution: "Conservatorio Nacional de Música",
+          degree: "Especialidad: Trompeta",
+          period: "1986 – 1990"
+        },
+        {
+          institution: "CEP Peruano Chino 10 de Octubre",
+          degree: "Educación secundaria",
+          period: "1980 – 1984"
+        },
+        {
+          institution: "CEP Nuestra Señora de la Merced",
+          degree: "Educación primaria",
+          period: "1974"
+        }
+      ],
+      experience: [
+        {
+          company: "Universidad Nacional de Huancavelica",
+          role: "Director de la Escuela de Posgrado",
+          period: "2024 – Actualidad",
+          description: "Dirección de la Escuela de Posgrado de la UNH."
+        },
+        {
+          company: "Universidad Nacional de Huancavelica · Escuela Profesional de Zootecnia",
+          role: "Docente principal",
+          period: "1997 – Actualidad",
+          description: "Docencia universitaria en la Escuela Profesional de Zootecnia."
+        },
+        {
+          company: "Universidad Nacional de Moquegua",
+          role: "Vicepresidente de Investigación",
+          period: "2021 – 2023",
+          description: "Gestión y promoción de la investigación universitaria."
+        },
+        {
+          company: "Universidad Nacional Autónoma de Huanta",
+          role: "Vicepresidente de Investigación",
+          period: "2018 – 2019",
+          description: "Gestión de la investigación institucional."
+        },
+        {
+          company: "Colegio de Ingenieros del Perú",
+          role: "Director tesorero nacional",
+          period: "2022 – 2024",
+          description: "Gestión institucional a nivel nacional."
+        },
+        {
+          company: "Colegio de Ingenieros del Perú",
+          role: "Director protesorero nacional",
+          period: "2019 – 2021",
+          description: "Gestión institucional a nivel nacional."
+        },
+        {
+          company: "CIP Consejo Departamental Huancavelica",
+          role: "Decano",
+          period: "2013 – 2015",
+          description: "Representación y gestión del consejo departamental."
+        },
+        {
+          company: "Capítulo de Zootecnia · CIP CD Huancavelica",
+          role: "Presidente",
+          period: "2008 – 2009",
+          description: "Dirección del capítulo profesional de zootecnia."
+        }
+      ],
+      additionalInfo: [
+        "Investigador RENACYT Nivel III (CONCYTEC).",
+        "Director del Departamento Académico de Zootecnia de la UNH en tres oportunidades.",
+        "Director del Centro Preuniversitario de la UNH (2011).",
+        "Docente de posgrado en la Universidad Nacional del Altiplano, Universidad Nacional Hermilio Valdizán, Universidad Nacional Agraria La Molina y Universidad Nacional de Huancavelica."
+      ]
+    }
   },
   {
     slug: "panel-retos",
