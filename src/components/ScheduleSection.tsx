@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { blockLabels, schedule, type ScheduleBlock } from "../data/schedule";
 
 const blockStyles: Record<ScheduleBlock, string> = {
@@ -59,39 +59,50 @@ export default function ScheduleSection() {
               <span>Actividad</span>
             </div>
             {day.items.map((item, index) => (
-              <div
-                key={`${item.time}-${index}`}
-                className="grid grid-cols-[150px_170px_1fr] gap-4 border-t border-cip-border/70 px-5 py-5 transition hover:bg-white/60"
-              >
-                <span className="font-black text-cip-navy">{item.time}</span>
-                <span className={`h-fit w-fit rounded-full border px-3 py-1 text-xs font-black ${blockStyles[item.block]}`}>
-                  {blockLabels[item.block]}
-                </span>
-                <div>
-                  <p className="font-bold text-cip-ink">{item.title}</p>
-                  {item.speaker && <p className="mt-1 text-sm font-bold text-cip-blue">{item.speaker}</p>}
-                  {item.description && <p className="mt-2 text-sm leading-6 text-cip-body">{item.description}</p>}
+              <Fragment key={`${item.time}-${index}`}>
+                {item.section && (
+                  <div className="border-t border-cip-border bg-cip-warm px-5 py-3 text-center text-sm font-black uppercase tracking-wide text-cip-navy">
+                    {item.section}
+                  </div>
+                )}
+                <div className="grid grid-cols-[150px_170px_1fr] gap-4 border-t border-cip-border/70 px-5 py-5 transition hover:bg-white/60">
+                  <span className="font-black text-cip-navy">{item.time}</span>
+                  <span className={`h-fit w-fit rounded-full border px-3 py-1 text-xs font-black ${blockStyles[item.block]}`}>
+                    {blockLabels[item.block]}
+                  </span>
+                  <div>
+                    <p className="font-bold text-cip-ink">{item.title}</p>
+                    {item.speaker && <p className="mt-1 text-sm font-bold text-cip-blue">{item.speaker}</p>}
+                    {item.description && <p className="mt-2 text-sm leading-6 text-cip-body">{item.description}</p>}
+                  </div>
                 </div>
-              </div>
+              </Fragment>
             ))}
           </div>
 
           <div className="space-y-4 lg:hidden">
             {day.items.map((item, index) => (
-              <article key={`${item.time}-${index}`} className="relative border-l-2 border-cip-gold pl-5">
-                <span className="absolute -left-[9px] top-1 h-4 w-4 rounded-full border-2 border-cip-paper bg-cip-gold shadow-sm"></span>
-                <div className="rounded-3xl border border-cip-border bg-cip-cream p-4 shadow-sm">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <span className="font-black text-cip-navy">{item.time}</span>
-                    <span className={`rounded-full border px-3 py-1 text-xs font-black ${blockStyles[item.block]}`}>
-                      {blockLabels[item.block]}
-                    </span>
+              <Fragment key={`${item.time}-${index}`}>
+                {item.section && (
+                  <p className="pt-4 text-center text-xs font-black uppercase tracking-wide text-cip-copper">
+                    {item.section}
+                  </p>
+                )}
+                <article className="relative border-l-2 border-cip-gold pl-5">
+                  <span className="absolute -left-[9px] top-1 h-4 w-4 rounded-full border-2 border-cip-paper bg-cip-gold shadow-sm"></span>
+                  <div className="rounded-3xl border border-cip-border bg-cip-cream p-4 shadow-sm">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="font-black text-cip-navy">{item.time}</span>
+                      <span className={`rounded-full border px-3 py-1 text-xs font-black ${blockStyles[item.block]}`}>
+                        {blockLabels[item.block]}
+                      </span>
+                    </div>
+                    <h4 className="mt-3 font-black leading-snug text-cip-ink">{item.title}</h4>
+                    {item.speaker && <p className="mt-2 text-sm font-bold text-cip-blue">{item.speaker}</p>}
+                    {item.description && <p className="mt-2 text-sm leading-6 text-cip-body">{item.description}</p>}
                   </div>
-                  <h4 className="mt-3 font-black leading-snug text-cip-ink">{item.title}</h4>
-                  {item.speaker && <p className="mt-2 text-sm font-bold text-cip-blue">{item.speaker}</p>}
-                  {item.description && <p className="mt-2 text-sm leading-6 text-cip-body">{item.description}</p>}
-                </div>
-              </article>
+                </article>
+              </Fragment>
             ))}
           </div>
         </div>
