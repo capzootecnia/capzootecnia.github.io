@@ -25,7 +25,7 @@ const blocks: SpeakerBlock[] = [
 
     <div class="mt-14 space-y-16">
       {blocks.map((block) => {
-        const group = speakers.filter((speaker) => speaker.block === block);
+        const group = speakers.filter((speaker) => speaker.block === block && speaker.showInSpeakers !== false);
         const gridClass =
           group.length === 1
             ? "grid w-full max-w-[320px]"

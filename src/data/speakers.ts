@@ -54,12 +54,13 @@ export type Speaker = {
   professionalTitle: string;
   institution?: string;
   country?: string;
-  topic: string;
+  topic?: string;
   description: string;
   image: string;
   imagePosition?: string;
   profileImage?: string;
   profileImagePosition?: string;
+  showInSpeakers?: boolean;
   organizationLogo?: {
     src: string;
     alt: string;
@@ -315,7 +316,7 @@ export const speakers: Speaker[] = [
   },
   {
     slug: "herbert-ortiz",
-    name: "Ing. Herbert Ortiz Herrera",
+    name: "Herbert Ortiz Herrera",
     block: "Comercial y empresarial",
     professionalTitle: "Ingeniero Zootecnista · Gerente de Nutrición",
     institution: "LevAnia SAC",
@@ -360,6 +361,121 @@ export const speakers: Speaker[] = [
           role: "Especialista y responsable de producción pecuaria",
           period: "Trayectoria profesional",
           description: "Experiencia en asistencia técnica, desarrollo productivo y gestión pecuaria."
+        }
+      ]
+    }
+  },
+  {
+    slug: "lizbeth-collazos",
+    name: "Ing. Lizbeth Lourdes Collazos Paucar",
+    block: "Panel",
+    professionalTitle: "Mg. en Ciencia Animal · Doctora en Calidad y Productividad Animal",
+    institution: "Universidad Nacional Autónoma de Alto Amazonas",
+    description:
+      "Docente investigadora especializada en nutrición de rumiantes, sistemas sostenibles de producción y mitigación del cambio climático.",
+    image: "/images/speakers/lizbeth-collazos.webp",
+    imagePosition: "50% 20%",
+    showInSpeakers: false,
+    profile: {
+      summary: [
+        "Ingeniera Zootecnista con maestría en Ciencia Animal y doctorado en Calidad y Productividad Animal. Su trayectoria combina investigación, innovación, docencia y vinculación con el sector productivo para fortalecer la competitividad de la producción pecuaria sostenible y resiliente frente al cambio climático.",
+        "Cuenta con experiencia en ciencia animal, nutrición de rumiantes, manejo y conservación de pastos y forrajes, sistemas silvopastoriles e integrados de producción, digestión y metabolismo ruminal, emisiones de gases de efecto invernadero y ganadería climáticamente inteligente.",
+        "Realizó una estancia de investigación en Agriculture and Agri-Food Canada, en Lethbridge, Canadá."
+      ],
+      education: [
+        {
+          institution: "Universidad de São Paulo",
+          degree: "Doctora en Ciencias en Zootecnia · Área de especialización: Calidad y Productividad Animal",
+          period: "Brasil"
+        },
+        {
+          institution: "Universidade Estadual do Norte Fluminense Darcy Ribeiro",
+          degree: "Magíster en Ciencia Animal · Área de especialización: Nutrición y Producción Animal",
+          period: "Brasil"
+        },
+        {
+          institution: "Universidad Nacional Agraria de la Selva",
+          degree: "Ingeniera Zootecnista",
+          period: "Perú"
+        },
+        {
+          institution: "Universidad Nacional Agraria de la Selva",
+          degree: "Bachiller en Ciencias Pecuarias",
+          period: "Perú"
+        }
+      ],
+      experience: [
+        {
+          company: "Universidad Nacional Autónoma de Alto Amazonas",
+          role: "Docente investigadora",
+          period: "Julio de 2023 – Actualidad",
+          description: "Docencia e investigación vinculadas a I+D+i."
+        },
+        {
+          company: "Universidad Nacional Autónoma de Alto Amazonas",
+          role: "Directora de I+D+i",
+          period: "Enero de 2026 – Actualidad",
+          description: "Dirección de investigación, desarrollo e innovación."
+        },
+        {
+          company: "Fundo Marishquilo S.A.C.",
+          role: "Asesora",
+          period: "Marzo de 2021 – Actualidad",
+          description: "Asesoría técnica especializada."
+        },
+        {
+          company: "Universidad Nacional de Educación Enrique Guzmán y Valle",
+          role: "Docente de posgrado",
+          period: "Abril de 2020 – Julio de 2023",
+          description: "Docencia de posgrado vinculada a I+D+i."
+        },
+        {
+          company: "Universidad Nacional del Callao",
+          role: "Docente investigadora",
+          period: "Mayo de 2020 – Julio de 2023",
+          description: "Docencia e investigación vinculadas a I+D+i."
+        },
+        {
+          company: "Universidad Nacional Mayor de San Marcos",
+          role: "Investigadora postdoctoral",
+          period: "Agosto de 2020 – Junio de 2022",
+          description: "Investigación postdoctoral vinculada a I+D+i."
+        },
+        {
+          company: "Universidad Alas Peruanas S.A.",
+          role: "Docente",
+          period: "Marzo de 2018 – Diciembre de 2019",
+          description: "Docencia universitaria vinculada a I+D+i."
+        },
+        {
+          company: "Instituto Nacional de Innovación Agraria",
+          role: "Consultora",
+          period: "Julio de 2019 – Diciembre de 2019",
+          description: "Consultoría especializada vinculada a I+D+i."
+        },
+        {
+          company: "Universidade de São Paulo",
+          role: "Investigadora",
+          period: "Abril de 2013 – Abril de 2017",
+          description: "Investigación con dedicación exclusiva."
+        },
+        {
+          company: "Agriculture and Agri-Food Canada",
+          role: "Investigadora",
+          period: "Abril de 2016 – Agosto de 2016",
+          description: "Estancia de investigación en Lethbridge, Canadá."
+        },
+        {
+          company: "Universidade Estadual do Norte Fluminense Darcy Ribeiro",
+          role: "Investigadora",
+          period: "Febrero de 2009 – Diciembre de 2010",
+          description: "Investigación con dedicación exclusiva."
+        },
+        {
+          company: "Proyecto Especial Alto Huallaga",
+          role: "Jefa del área de créditos en especie",
+          period: "Febrero de 2007 – Diciembre de 2008",
+          description: "Gestión del área de créditos en especie."
         }
       ]
     }
@@ -418,9 +534,8 @@ export const speakers: Speaker[] = [
     slug: "jaime-ruiz",
     name: "Ing. Jaime Antonio Ruiz Béjar",
     block: "Prospectiva",
-    professionalTitle: "Doctor en Ciencias Veterinarias · Decano Nacional CIP",
+    professionalTitle: "Decano Nacional CIP",
     institution: "Colegio de Ingenieros del Perú",
-    topic: "Legislación y ejercicio profesional del Ingeniero Zootecnista.",
     description:
       "Sesión sobre marco profesional, ejercicio ético y fortalecimiento institucional.",
     image: "/images/speakers/jaime-ruiz.jpg",
@@ -575,9 +690,11 @@ export const panelParticipants: PanelParticipant[] = [
     imagePosition: "50% 24%"
   },
   {
-    name: "Ing. Docente de la UNSAAC",
-    role: "Participación por confirmar",
-    image: placeholder
+    name: "Ing. Lizbeth Lourdes Collazos Paucar",
+    role: "Docente investigadora · UNAAA",
+    image: "/images/speakers/lizbeth-collazos.webp",
+    imagePosition: "50% 20%",
+    profileSlug: "lizbeth-collazos"
   },
   {
     name: "Ing. Félix Boza",
