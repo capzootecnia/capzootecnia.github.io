@@ -690,7 +690,7 @@ export const panelParticipants: PanelParticipant[] = [
     imagePosition: "50% 24%"
   },
   {
-    name: "Ing. Lizbeth Lourdes Collazos Paucar",
+    name: "Ing. Lizbeth Collazos Paucar",
     role: "Docente investigadora · UNAAA",
     image: "/images/speakers/lizbeth-collazos.webp",
     imagePosition: "50% 20%",
