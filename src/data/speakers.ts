@@ -697,8 +697,8 @@ export const panelParticipants: PanelParticipant[] = [
     profileSlug: "lizbeth-collazos"
   },
   {
-    name: "Ing. Félix Boza",
-    role: "Participante invitado",
+    name: "Ing. Félix Boza Choquehuanca",
+    role: "Gerente Regional de Desarrollo Económico - GORE Cusco",
     image: "/images/speakers/felix-boza.jpg",
     imagePosition: "50% 20%"
   }
